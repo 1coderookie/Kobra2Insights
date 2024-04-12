@@ -67,7 +67,7 @@ In the following I'll list the most crucial points.
 
 - Set up the frame correctly!  
   Means, check if the baseframe is mounted being square, if the the z-axis aluminum parts are really mounted perpendicular onto the baseframe and so on. **As everything else relies on this, the proper alignment of the frame is the most important step!**  
-  So, once again: **Set up your frame and your axes. Everything should be square, perpendicular and equidistant.**  
+  So, once again: **Set up your frame and your axes. Everything should be square, perpendicular and equidistant.**
 - Check if all screws, bolts and nuts are tight.     
 - **Check the axes!**  
   Means, check the whole z-axis lead screw system for being assembled correctly and vertically aligned and that the timing belt is properly tensioned.
@@ -146,7 +146,6 @@ If you feel any reoccuring hiccups during movements or when turning a wheel and 
 If any wheels or bearings seem to be damaged or faulty, get yourself new ones and install them.  
  
 Also pay attention to the correct positions of the V-slot wheels and the SG15 bearings. They should sit in the v-slot of the rails / on the metal rod of the rails perfectly and they shouldn't run too loose nor too tight. Please refer to the according sections for further information. 
-
 
 
 ---
