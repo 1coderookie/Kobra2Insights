@@ -3,11 +3,12 @@
 # Stock Firmware (Marlin Based) 
 The official stock firmware is based on the [Marlin 2 firmware](https://marlinfw.org/) (v2.?.?).  
   
+There are two versions available: **[v2.9.3](https://drive.google.com/file/d/1oxpcU_LTA7U5adV9tsOOSkZKvfeb6VB9/view?usp=drive_link)** and **[v3.0.6](https://drive.google.com/file/d/1U3eobMOb2IgBkFM1IME7WMVEdEwIy_yI/view?usp=sharing)**.  
 
 You can either  
 
-- download the necessary `firmware.bin` file at [Anycubic's firmware & software page](https://www.anycubic.com/pages/firmware-software) (direct link to [v1.5.6.3](https://drive.google.com/file/d/10Dd68p6FUK7iA9wFi2Gw_zl9HNVkPZNn/view)) or  
-- download the source code from their specific GitHub repository to compile your own:  [https://github.com/ANYCUBIC-3D/Kobra2_Neo](https://github.com/ANYCUBIC-3D/Kobra2_Neo) 
+- download the necessary file at [Anycubic's firmware & software page](https://www.anycubic.com/pages/firmware-software) (see direct links above) or  
+- download the source code *of the outdated v2.8.7(!)* from their specific GitHub repository to compile your own:  [https://github.com/ANYCUBIC-3D/Kobra2](https://github.com/ANYCUBIC-3D/Kobra2) 
      
 In case you want to build and compile your own `firmware.bin` file, you can follow the instructions of @[jojos38](https://github.com/jojos38) [Tutorial: How to build Anycubic Marlin sourcecode into a firmware.bin](https://www.reddit.com/r/anycubic/comments/y2waxu/tutorial_how_to_build_anycubic_marlin_source_code/).
 
@@ -28,11 +29,11 @@ If so, everything is fine. If not, check if you really copied the correct versio
 ## Default Settings 
 In the following I'll list the (imho) most important settings from the files  
 
-- [`../source/Marlin/Configuration.h`](https://github.com/ANYCUBIC-3D/Kobra2_Neo/blob/main/Marlin/Configuration.h) and 
-- [`../source/Marlin/Configuration_adv.h`](https://github.com/ANYCUBIC-3D/Kobra2_Neo/blob/main/Marlin/Configuration_adv.h).   
+- [`../source/Marlin/Configuration.h`](https://github.com/ANYCUBIC-3D/Kobra2/blob/main/source/Marlin/Configuration.h) and 
+- [`../source/Marlin/Configuration_adv.h`](https://github.com/ANYCUBIC-3D/Kobra2/blob/main/source/Marlin/Configuration_adv.h).   
    
-The following represents the state of the firmware version 1.5.6.3.  
-You can find the files `Configuration.h`and`Configuration_adv.h` here: [https://github.com/ANYCUBIC-3D/Kobra2_Neo/tree/main/Marlin](https://github.com/ANYCUBIC-3D/Kobra2_Neo/tree/main/Marlin)  
+The following represents the state of the *outdated firmware version 2.8.7 which is available at GitHub*.  
+You can find the files `Configuration.h`and`Configuration_adv.h` here: [https://github.com/ANYCUBIC-3D/Kobra2/tree/main/source/Marlin](https://github.com/ANYCUBIC-3D/Kobra2/tree/main/source/Marlin)  
 
 **Note: I'll add the content asap, until then please have a look at the files yourself.**
 
@@ -390,11 +391,11 @@ However, be careful when changing *any* settings and keep in mind what the origi
 ### Default Axis Steps Per Unit  
 ```
 /**
- * Default Axis Steps Per Unit (linear=steps/mm, rotational=steps/°)
+ * Default Axis Steps Per Unit (steps/mm)
  * Override with M92
- *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
+ *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 455}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 99, 99, 394, 457}
 ```
 
 ??? info  
@@ -407,13 +408,14 @@ However, be careful when changing *any* settings and keep in mind what the origi
 ### Default Max Feed Rate 
 ```
 /**
- * Default Max Feed Rate (linear=mm/s, rotational=°/s)
+ * Default Max Feed Rate (mm/s)
  * Override with M203
- *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
+ *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 80 }
 ```
 
+<!--
 ??? warning "Limited Retraction Speed"
 
     So in case you were trying to find the optimum retraction speed and therefore printing retraction towers and wondered why there wasn't any real difference between e.g. 30mm/s, 40mm/s and 50mm/s, the reason is simple - they just didn't apply!  
@@ -446,6 +448,7 @@ However, be careful when changing *any* settings and keep in mind what the origi
         ``` 
         
     Now you can start trying to find the best retraction speed that may be above 25mm/s by printing retraction towers. 
+-->
 
 ---
       
@@ -453,12 +456,12 @@ However, be careful when changing *any* settings and keep in mind what the origi
   
 ```
 /**
- * Default Max Acceleration (speed change with time) (linear=mm/(s^2), rotational=°/(s^2))
+ * Default Max Acceleration (change/s) change = mm/s
  * (Maximum start speed for accelerated moves)
  * Override with M201
- *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
+ *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 500, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 500, 3000 }
 ```
 
 ---
@@ -466,14 +469,14 @@ However, be careful when changing *any* settings and keep in mind what the origi
 ### Default Acceleration
 ```
 /**
- * Default Acceleration (speed change with time) (linear=mm/(s^2), rotational=°/(s^2))
+ * Default Acceleration (change/s) change = mm/s
  * Override with M204
  *
  *   M204 P    Acceleration
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_ACCELERATION          3000     // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 ```
@@ -484,7 +487,7 @@ However, be careful when changing *any* settings and keep in mind what the origi
 ```
 /**
  * Default Jerk limits (mm/s)
- * Override with M205 X Y Z . . . E
+ * Override with M205 X Y Z E
  *
  * "Jerk" specifies the minimum speed change that requires acceleration.
  * When changing speed and direction, if the difference is less than the
@@ -492,25 +495,33 @@ However, be careful when changing *any* settings and keep in mind what the origi
  */
 #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 10.0
-  #define DEFAULT_YJERK 10.0
-  #define DEFAULT_ZJERK  0.3
+  #define DEFAULT_XJERK  8
+  #define DEFAULT_YJERK  8
+  #define DEFAULT_ZJERK  0.4
 
 ...
 
-#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
+#define DEFAULT_EJERK    8.0  // May be used by Linear Advance
 ```
 
 ---
 
+### S-Curve Acceleration
+```
+/**
+ * S-Curve Acceleration
+ *
+ * This option eliminates vibration during printing by fitting a Bézier
+ * curve to move acceleration, producing much smoother direction changes.
+ *
+ * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
+ */
+#define S_CURVE_ACCELERATION
+```
 
 
 ---
-<!--
-### Linear Advance  
-The useful function "Linear Advance" is NOT activated!  
-This seems to be due to the fact that (afaik) there's some kind of problem with Marlin firmware versions before v2.1 and TMC2208 stepper drivers. 
--->
+
 
 
 
