@@ -2,10 +2,10 @@
 
 # Klipper (MOD)  
 
-Can you run [Klipper](https://www.klipper3d.org/) on the stock mainboard of the Kobra 2 Neo?  
+Can you run [Klipper](https://www.klipper3d.org/) on the stock mainboard of the Kobra 2?  
 Oh yes, you can!  
 
-The GigaDevice "GD32F303" being used on the stock mainboard is supported by the Klipper firmware.      
+The "Huada HC32F460" MCU being used on the stock mainboard is supported by the Klipper firmware.      
   
 ??? tip "Important Information To Be Aware Of" 
 
@@ -38,22 +38,21 @@ However, there are options to e.g. add a touchscreen to your host or use an old 
 Basically you need to clone the Klipper repository and compile the necessary `klipper.bin` file (which you then rename to `firmware.bin` to actually flash the stock mainboard) which you flash onto the mainboard then. Please watch out for some dedicated tutorials about this procedure, as I don't offer a step by step guide here (yet) about it.  
 For further information about the installation steps please read the chapter ["Installation"](https://www.klipper3d.org/Installation.html) of the official Klipper documentation.  
 
-You can find the intial discussion about getting Klipper running on the Kobra 2 Neo [here in the Klipper discourse group](https://klipper.discourse.group/t/getting-orange-pi-3-lts-klipper-working-with-anycubic-kobra-2-neo/11278).  
+To build the correct firmware, use the following configuration during the setup process for creating the `klipper.bin` file:  
 
-**According to those posts**, to build the correct firmware, use the following configuration during the setup process for creating the `klipper.bin` file:  
-
-- Micro-controller Architecture: STMicroelectronics STM32
-- Processor model: STM32F103
-- Bootloader: 36KiB  
-- Communication interface: Serial on USART2 PA3/PA2 with 115200 baud rate (or 250000 if you want to use USB connection)    
+- Micro-controller Architecture: ..
+- Processor model: ..
+- Bootloader: ..  
+- Communication interface: ..    
   
-![K2Neo compile config](../assets/images/K2Neo_bin-cfg.jpg)   
+![K2 compile config](../assets/images/K2_bin-cfg.jpg)   
 
+<!--
 !!! warning "File `printer.cfg` Available!"  
 
     Thanks to [AJolly](https://github.com/AJolly) who contributed the specific file, you can now find them in the ["Kobra2Neo" folder of the "Klipper4Kobra2series" repository](https://github.com/1coderookie/Klipper4Kobra2series/tree/main/Kobra2Neo).   
     (*Note: please don't reach out to me if you have any questions about these files or the settings - neither am I the creator of these files nor do I own a K2Neo myself and therefore I can't test anything. Thanks.*)  
-
+-->
 
 Once you've found or created the specific `klipper.bin` file, rename it to `firmware.bin` and copy it to the root directory (means, directly onto the card, not in a subfolder!) of your mSD card. I personally would suggest to remove all files from the mSD card and only copy the `firmware.bin` file onto it.  
 Then you flash it as you would do with the stock firmware. Means, you turn off the printer, put the card into the cardreader and turn on the printer.  
@@ -340,7 +339,7 @@ Fluidd is kinda similar to Mainsail, so it's a great alternative if you don't wa
 The following screenshot shows the dashboard overview of Fluidd (without a camera for monitoring the printer being used).  
 
 ![Fluid UI](../assets/images/fluidd_screenshot.png)
--->    
+    
 
 ---
 
