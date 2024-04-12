@@ -6,7 +6,7 @@
 |:---------------|
 | **Bedplate**: 230x230mm, 3mm thick aluminum plate with PCB heating coil |
 | **Magnetic Foil**: 230x230mm |
-| **PEI Plate**: 230x230mm, spring steel, textured on one side |
+| **PEI Plate**: 230x230mm, spring steel, textured on both sides |
 | **Thermistor**: 24V, 100k NTC "ATC Semitec 104GT-2" type, AWG22 wire, two pinned JST XH 2.54 connector |
 | **PCB Heating Coil**: 24V, ~180W, ~3.2Ohm resistance, AWG14 wire |
 | **Bedmount**: 7x14mm rigid spacers/bushings, 4x22mm countersunk head screws |
@@ -23,15 +23,26 @@ The following pictures show the bedplate (without the PEI plate) from the top an
 
 | Bedplate topside | Bedplate underside |
 |:----------------:|:------------------:|
-| ![Bedplate top](../assets/images/bed_K2Pro_bedplate-labeled_web.jpg) | ![Bedplate underside](../assets/images/bed_K2Pro_bedplate-underside_web.jpg) |
+| ![Bedplate top](../assets/images/bed_K2Pro_bedplate-labeled_web.jpg) | ![Bedplate underside](../assets/images/bed_K2Neo_underside_web.jpg) |
 
 The build volume is 220x220mm.  
 Anycubic states in the official specs that the *size* is 220x220mm as well - which is definitely wrong and misleading though, as the *physical* dimension of the bed is 230x230mm.  
 
-!!! warning "Attention: Bed Size"  
+!!! warning "Attention: Bed/Plate Size"  
 
     If you're looking for a bedplate, a magnetic foil or just a PEI plate from a third party company, you need to get yourself a *230x230mm* plate, otherwise it would be too small!  
     As it seems that most parts out there are either 220x220mm or 235x235mm, get yourself the 235x235mm version then. There is about 4mm space between the z-axis aluminum frames and the original bedplate, so if you pay attention to position e.g. the bigger PEI plate from the aftermarket correctly, then it'll fit.     
+??? info "Using The Whole Build Size"  
+
+    Even though the size of 220x220mm is set in the firmware as follows  
+    ```
+    // The size of the printable area
+    #define X_BED_SIZE 220
+    #define Y_BED_SIZE 220    
+    ```
+    you can set the size to 230x230mm in the slicer and use the whole printbed size.  
+    *However, if you do this, please be careful and pay close attention when trying to print anything bigger than 220x220mm!*  
+    
 
 The temperature of the bed should reach about ≤230°F/110°C maximum and therefore it's possible to successfully print e.g. ABS, PETG and TPU (by using a housing though) besides PLA.  
 
@@ -50,12 +61,17 @@ Next to the wiring at the left rear side of the bedplate is a sensor for measuri
 
 ![Bedplate top](../assets/images/bed_K2Pro_bedplate-labeled_web.jpg)  
 
-When buying the bedplate as a spare part, it'll come without the magnetic foil being attached, so you have to get yourself the magnetic foil/sticker as well.  
-The surface of the plate is covered with a protective foil, which you have to pull off before applying the magnetic foil.   
+When buying the bedplate as a spare part, it'll come without the magnetic foil being attached as the following picture shows.  
+
+<!--
+![Bedplate top view](../assets/images/bed_plate-new_web.jpeg)  
+
+The surface is covered with a protective foil, which you have to pull off before applying the magnetic foil.   
+-->
 
 The heating coil is applied as a PCB to the underside of it as you can see in the following picture.  
 
-![Bedplate underside](../assets/images/bed_K2Pro_bedplate-underside_web.jpg)  
+![Bedplate underside](../assets/images/bed_K2Neo_underside_web.jpg)  
    
 At the left rear side of the bedplate you'll notice a black plastic cap which sticks out. Be careful to never break it by accident as it acts as a strain relief and protects the wires which are soldered to the contacts of the board at the bottom side.  
 Next to that cap the z-offset sensor and the silicone block for wiping the nozzle before probing the bed's surface are located as shown in the following picture.  
@@ -64,11 +80,8 @@ Next to that cap the z-offset sensor and the silicone block for wiping the nozzl
 
 The following pictures show the underside view of these parts.  
   
-![Soldered connections](../assets/images/bed_K2Pro_bedplate-connectors_web.jpg)  
+![Soldered connections](../assets/images/bed_K2Neo_underside-connectors_web.jpg)  
 
-Here you can also see the acceleration sensor, the following picture shows it in a closeup view.  
-
-![Closeup connector](../assets/images/bed_K2Pro_bedplate-connector-closeup_web.jpg)  
   
 When you take a look underneath the bed itself, you'll spot a little foam piece secured by Kapton tape as you can see in the following picture.  
   
@@ -179,12 +192,11 @@ The following picture shows a magnetic foil that Anycubic shipped together with 
         
 The bed uses a removable 230x230mm PEI-coated spring steel plate which makes it easy to remove the printed object.  
 
-![PEI plate](../assets/images/bed_K2Pro_PEI-plate_web.jpg)  
-
-The plate that comes with the printer is textured on one side.    
-The following picture shows the surface of the textured side which you're supposed to print on from a close-up view.  
+The plate that comes with the printer is textured on both sides.    
+The following picture shows the surface from a close-up view.  
   
-![Close-up view of the PEI-coated plate](../assets/images/bed_K2Pro_PEI-plate_closeup_web.jpg)  
+![Close-up view of the PEI-coated plate](../assets/images/bed_closeup_web.jpg)  
+
 
 
 !!! warning "Attention: PEI Plate Size"  
@@ -220,7 +232,7 @@ The sensor itself is a round, spring loaded metallic piece of 10mm diameter. It'
 
 In the following picture you can see the two pin connector with the red and white wires which connect the z-offset sensor to the mainboard.  
 
-![Soldered connections](../assets/images/bed_K2Pro_bedplate-connectors_web.jpg)  
+![Soldered connections](../assets/images/bed_K2Neo_underside-connectors_web.jpg)  
 
 ---
 
@@ -323,19 +335,6 @@ If rests of filament are stuck on it after the nozzle has been wiped, take them 
 
 ---
 
-## ADXL Acceleration Sensor
-There's an ADXL acceleration sensor for measuring the vibrances installed at the rear side of the bed's underside, right where the z-offset sensor is located.   
-
-The following pictures show the underside view of the belonging area of the bed's underside.    
-  
-![Soldered connections](../assets/images/bed_K2Pro_bedplate-connectors_web.jpg)  
-
-The following picture shows the acceleration sensor and it's connector in a closeup view.  
-
-![Closeup connector](../assets/images/bed_K2Pro_bedplate-connector-closeup_web.jpg)  
-
----
-
 ## Spacers / Bushings Of The Bedmount
 
 The bedplate is mounted onto the gantry with 4mm countersunk screws and rigid metal spacers between the bedplate itself and the gantry.  
@@ -415,28 +414,18 @@ Keep in mind that the silicone spacers (I used 18mm long ones shown below) compr
 
 ## Bed Gantry
 
-The bedplate itself is mounted to the bed gantry which runs along the y-axis rail shown in the following pictures.  
+The bedplate itself is mounted to the bed gantry which runs along the y-axis shown in the following picture.  
 
-![Bed gantry top view](../assets/images/bed_K2Pro_gantry2_web.jpg)  
+![Bed gantry](../assets/images/bed_K2Neo_gantry_web.jpg)
 
-As you can see, the belt is hooked into the belonging notches at the front and the rear of the H-shaped gantry.     
-The side parts of the gantry with the threaded M4 mounting holes for the screws which hold the bedplate (see the silver spacers for the locations) are bent like an L for additional stability.  
-The SG15 bearings that run along the round-shaped rails at the sides of the aluminum y-axis frame are mounted to the undersideof the gantry.  
-
-![Bed gantry front view](../assets/images/bed_K2Pro_gantry1_web.jpg)  
-
-The following picture shows the right side of the gantry from a sort of underside view to show you the positions of the eccentric nuts of the SG15 bearings.  
-
-![Eccentric nuts Y sideview](../assets/images/bed_K2Pro_eccentric-nuts-gantry_web.jpg) 
-
-The y-axis limit switch is being triggered by the rear left SG15 roller when the gantry is moving completely to the back.  
-
-![Y-axis limit switch](../assets/images/axes_K2Pro_Y-limitswitch_web.jpg)  
+The v-slot wheels that run along the aluminum y-axis frame are mounted to the underside, the belt is also attached to the gantry. 
+The screws that hold the bedplate are screwed into 4mm threads of the gantry.   
+The y-axis limit switch is being triggered by the gantry when it's moving completely to the back.  
   
 !!! warning "Important: Check The Screws Of The Bedplate And The Gantry Of The Bed"
 
-    - Check if the screws are all tightened up.    
-    - Check if the bedplate itself is somehow wobbly. Not only sidewards (horizontally), but also up and down (vertically). If so, not only check the positions of the SG15 rollers and maybe adjust their fitting using the eccentric nuts, also check if the screws of the gantry of the bed where the wheels are mounted to are tightened up.     
+    - Check if the screws are all tightened up. Be careful though to not overtighten the screws of the Bedplate as you may compress the little spacers underneath it and therefore the plate may become warped. On the other hand, if you see that your bed is warped somehow or that the bed is much more off in certain areas or at one side, you can check if the screws in that area might be too tightened up or too loose.  
+    - Check if the bedplate itself is somehow wobbling. Not only sideways (horizontally), but also up and down (vertically). If so, not only check the v-slot wheels and maybe adjust their fitting using the eccentric nuts, also check if the screws of the gantry of the bed where the wheels are mounted to are tightened up.     
 
 
 ---
@@ -446,7 +435,7 @@ The y-axis limit switch is being triggered by the rear left SG15 roller when the
 !!! note "For Demonstration Purposes Only (At This Point Of Time!)"  
 
     The following descriptions and pictures are about a 3 point bedmount mod I made to one of my Neos.  
-    At this point this is just mentioned here for demonstration purposes only, I'm not yet recommending to modify the Kobra 2 Pro like this. This is only due to the assumption that the springs that are needed for the following mod might add some instability to the bedplate, which could negatively effect the outcome when printing at the maximum speeds of 500mm/s and 20.00mm/s² acceleration Anycubic is advertising for this machine.*   
+    At this point this is just mentioned here for demonstration purposes only, I'm not yet recommending to modify the Kobra 2 Neo like this. This is only due to the assumption that the springs that are needed for the following mod might add some instability to the bedplate, which could negatively effect the outcome when printing at the maximum speeds of 250mm/s and with high accelerations Anycubic is advertising for this machine.*   
 
 I did a bit of tinkering and modded the bedmount to a 3 point bed mount instead of the classic 4 point mount.  
 

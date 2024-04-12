@@ -1,37 +1,51 @@
 <link rel=”manifest” href=”docs/manifest.webmanifest”>
 
 # Printhead
+ 
 
 | Specifications |
 |:---------------|
-| **Feeder system**: Direct drive, dual gear, 4:1 ratio |
-| **Thermistor**: 24V, 100k NTC "EPCOS 100K B57560G104F" type, capsuled, dimensions 3x5.5mm, two pinned JST PH 2.0 (?) connector |
+| **Feeder system**: Direct drive, single gear |
+| **Thermistor**: 24V, 100k NTC "EPCOS 100K B57560G104F" type, capsuled, dimensions 3x5.5mm, two pinned JST PH 2.0 connector |
 | **Heater Cartridge**: 24V, 60W, ~10.5 Ohm, dimensions 6x18.5mm, two pinned Molex Micro-Fit 3.0 (item-no. 43645-0200) connector |
 | **Nozzle**: proprietary Volcano-like nozzle (*not* compatible with Volcano!), 0.4mm |
 | **Heater Block**: Volcano-like type |
-| **Heatbreak**: M6 thread (to fit in the heater block), overall length 25/26(?)mm, 6mm OD / 4mm ID, PTFE tube inliner |  
-| **PTFE tube**: <br> **Hotend**: ~41mm inliner for the heatbreak, ~4mm OD / ~2mm ID bore <br> **Reverse bowden tube** (between filament runout sensor and printhead): ~???mm <br> *Both PTFE tubes can/should be replaced with a "Capricorn XS" tube (for 1.75mm filament).* |  
+| **Heatbreak**: M6 thread (to fit in the heater block), overall length 26mm, 6mm OD / 4mm ID, PTFE tube inliner |  
+| **PTFE tube**: <br> **Hotend**: ~41mm inliner for the heatbreak, ~4mm OD / ~2mm ID bore <br> **Reverse bowden tube** (between filament runout sensor and printhead): ~400mm <br> *Both PTFE tubes can/should be replaced with a "Capricorn XS" tube (for 1.75mm filament).* |  
 | **Silicone Sock**: Volcano-style type |
-| **Part Cooling Fan**: 24V, 0.14A, 50x50x20mm, model "Coolcox BF5020H24D"  |
+| **Part Cooling Fan**: 24V, 0.2A, 50x50x20mm, model "Coolcox BF5020H24D"  |
 | **Heatsink Cooling Fan**: 24V, 0.08A, 30x30x10mm, model "HSC BCY3010D24H"  |
-| **ABL sensor**: PNP-NO type (imho!), connection: brown = VCC 24VDC; blue = GND; black = LEVEL/signal (seems to be the same as the one being used at the 'old' regular Kobra) |  
+| **ABL sensor**: PNP-NO type, 6-36V DC, connection: brown = VCC 24VDC; blue = GND; black = LEVEL/signal |  
 | **Breakout board**: V0.1.5 |
 
 
 ---
 
-The printhead of the **Kobra 2 Pro** includes the direct drive feeder gear system, the distribution board for connecting the electronic components, the hotend, the heatsink and part cooling fans, the ABL sensor and the motion sensor for measuring the vibrances.   
+The printhead of the **Kobra 2 Neo** includes the direct drive feeder gear system, the distribution board for connecting the electronic components, the hotend, the heatsink and part cooling fans and the ABL sensor.   
 
-The following pictures show the printhead with the blue plastic cover from various angles.  
+The following pictures show the printhead with the blue plastic cover from various angles. At the picture of the top you can clearly see the lever you have to push aside for loading filament as well as the PC-4 connector in the middle which takes the reverse bowden tube.   
 
-| Front side | Back side | Top side | Bottom side |
-|:----------:|:---------:|:--------:|:-----------:|
-| ![Printhead front](../assets/images/head_K2Pro_head-front_web.jpg) | ![Printhead back](../assets/images/head_K2Pro_backside_web.jpg) | ![Printhead top](../assets/images/head_K2Pro_topside_web.jpg) | ![Printhead bottom](../assets/images/head_K2Pro_underside_web.jpg) |  
+| Front side | Back side | Top view |
+|:----------:|:---------:|:--------:|
+| ![Printhead front](../assets/images/head_K2_web.jpg) | ![Printhead back](../assets/images/head_K2_back_web.jpg) | ![Printhead top](../assets/images/head_K2Pro_top_web.jpg) | 
 
-!!! warning
+The following pictures show the left and right side of the printhead with the blue plastic cover. Mind the marking at the right side where the screw for adjusting the feeder gear tension is located.   
 
-    The printhead being used is the same as the one being used at the *Kobra 2 Plus* and *Kobra 2 Max* - but it is **not** the same as the one being used at the regular *Kobra 2* and the *Kobra 2 Neo*!  
-    So you can't get yourself one of those and use it at your Kobra 2 Pro!  
+| Left side | Right side | 
+|:----------:|:---------:|
+| ![Printhead left](../assets/images/head_K2_side-left_web.jpg) | ![Printhead right](../assets/images/head_K2_side-right_web.jpg) | 
+
+The following pictures show the head with the mounted cover from the underside view. At the second picture you can clearly see the outlets of the fanduct sticking out aand pointing to the left and right side of the hotend.  
+
+| Underside | Underside | 
+|:----------:|:---------:|
+| ![Printhead underside](../assets/images/head_K2_bottom_web.jpg) | ![Printhead underside](../assets/images/head_K2_bottomview_web.jpg) | 
+
+!!! warning  
+
+    It is **not** the same printhead as the one being used at the *Kobra 2 Pro, Plus and Max*. So you can **not** get yourself a printhead of these models and use it at the Kobra 2 Neo!  
+    It is 'pretty much' the same as the one being used in the regular *Kobra 2* though. The (only) difference (I'm aware of) seems to be the extruder, where the one at the Kobra 2 Neo is single-geared and the one at the Kobra 2 is a dual gear. Besides that, it seems that it's compatible and therefore one could get a printhead of the Kobra 2 and use it at the Kobra 2 Neo.  
+    However, I wasn't able to compare both heads 1:1 exactly and e.g. measure the pinouts of the PCB - but as they're labeled the same, I *assume* it's compatible. 
 
 --- 
 
@@ -41,11 +55,11 @@ The printhead itself is mounted to a metal plate which is running along the [x-a
 
 | Mounting plate front side | Mounting plate back side |  
 |:------------------------:|:-----------------------:|
-| ![Plate front side](../assets/images/head_K2Pro_mounting-plate-frontside_web.jpg) | ![Plate back side](../assets/images/head_K2Pro_mounting-plate-backside_web.jpg) |  
+| ![Plate front side](../assets/images/head_K2_gantry-front_web.jpg) | ![Plate back side](../assets/images/head_K2_gantry-back_web.jpg) |  
 
-The following picture shows the four screws which are being used to mount the printhead onto the plate.  
+The following picture shows the plate from the backside with the head being mounted, the four mounting screws are marked with a green circle.  
 
-![Mounting screws](../assets/images/head_K2Pro_head-back_mounting-screws-marked_web.jpg)  
+![Mounting screws](../assets/images/head_K2Neo_mountingplate-marked_web.jpg)  
 
 ---
 
@@ -64,14 +78,11 @@ Disassembling the printhead isn't really complicated. Just make sure you're care
     - *Don't harm or rip off any wires* as it may cause severe damage to your mainboard or might be complicated to fix later on.   
     
 Whatever you want to do, like if you want to change the hotend, the heater block, the heatbreak, a fan or even want to disassemble the whole feeder system, you have to remove the plastic cover of the printhead first.  
-It's secured by two hexagon socket screws at the top of the metal back plate and a plastic clip at each side at the lower bottom as you can see at the following picture (well, you don't really see the plastic clip though but you can see the belonging notch of one of them). Be gentle and careful to not break one of the clips - the best way to get them out of their fittings is to gently push together the whole plastic cover at the bottom sides.  
-  
-![Backside view of the head with mounted plastic cover](../assets/images/head_K2Pro_backside_web.jpg)  
-  
-Inside of the plastic housing, you can see the part cooling fan with the fan duct.  
-*Mind the thin wire of the fan - you don't want to rip it off!* 
+It's secured by two hexagon socket screws at the top of the metal back plate and a plastic clip at each side at the lower bottom. Be gentle and careful to not break one of the clips.  
 
-![Fan parts](../assets/images/head_K2Pro_cover-open_web.jpg)  
+*Once you can take off that cover, be very careful when doing so as the part cooling fan is mounted to it while being connected with two thin wires to the breakout board at the printhead- you don't want to rip off these wires!*
+  
+![Head with open cover](../assets/images/head_K2_open-cover_web.jpg)  
 
 After the plastic cover is gone, you're looking at the plastic backplate of the feeder gear. Underneath it, you can see the the black heatsink with the hotend in the middle and the proximity sensor at the right side of the hotend.  
   
@@ -103,15 +114,18 @@ The following picture shows the whole metal plate where the feeder construction 
 ## Breakout Board  
 
 There's a PCB located at the printhead where the electronic components (e.g. thermistor, cartridge heater, ABL sensor etc.) are connected to which I call (for the sake of simplicity) "breakout board".    
-The more 'formal' name for this is "Hot End Nozzle Adapter Board Breakout Module" - so I'll stick with "breakout board".. ;)
+The more 'formal' name for this is "Hot End Nozzle Adapter Board Breakout Module" - so I'll stick with "breakout board".. ;)  
 
-![Breakout board](../assets/images/head_K2Pro_distri-pcb_labeled_web.jpg)  
+The following picture shows the breakout board (with the extruder motor at the left hand side) how you see it when removing the plastic housing of the printhead.  
 
-The following picture shows this breakout board from a slightly different angles, so that you can see the labels at the wires and the plugs and connectors a bit better.  
+![Breakout board and motor](../assets/images/head_K2_breakoutboard-total_web.jpg)  
 
-![Breakout board sideview](../assets/images/head_K2Pro_distri-pcb_labels_web.jpg)  
+The following picture shows the breakout board only, with additional labels for the specific connectors.  
+
+![Breakout board labeled](../assets/images/head_K2Neo_distri-pcb_web.jpg)  
 
 The connection between the mainboard and this breakout board is then accomplished by a ribbon cable. The following picture shows the connector at the head and a part of that ribbon cable.  
+**As all connectors, this connector is coded - means, it only fits in ONE specific direction! Make sure to mind those 'noses' and notches and to plug it in correctly!**
 
 ![Ribbon cable](../assets/images/head_K2Pro_ribbon-cable-connector_web.jpg)  
 
@@ -131,8 +145,18 @@ The connection between the mainboard and this breakout board is then accomplishe
 The printer comes with an inductive proximity sensor for automatic bed leveling (ABL) which detects the metal of the spring steel PEI plate.  
 The ABL sensor is the part with that round orange tip whic is located at the right hand side when looking at the printhead from the front.  
 
-The sensor itself seems to be the same as the one being used at the regular Kobra, so if you need a replacement and can't find it for this specific model, look out for the one of the Kobra as well.  
-In a German 3d forum someone measured the sensor of the regular Kobra and it gives +24VDC on the black signal wire when the LED lights up, so imho that's a PNP-NO type then (as the level is HIGH then).  
+The following pictures show the location of the ABL sensor at the printhead. The ABL sensor is the part at the right side with the round orange tip.   
+  
+| ABL Sensor | ABL Sensor | 
+|:----------:|:---------:|
+| ![Sensor's location](../assets/images/head_K2_bottom_web.jpg) | ![Sensor's location](../assets/images/head_K2_bottomview_web.jpg) | 
+    
+The ABL sensor itself is mounted in a plastic bracket which is then mounted to the metal backplate.  
+  
+![ABL sensor](../assets/images/head_K2Pro_abl-sensor_web.jpg)
+
+
+The sensor is a PNP-NO type, 6-36V DC, with a three pin PH 2.0 connector.  
 The connections are:  
 
 - brown = VCC 24VDC
@@ -141,25 +165,12 @@ The connections are:
 
 
 The position of the sensor (the height) should be adjusted in relation to the nozzle.  
-Therefore you can either use the ABL height gauge which sometimes comes with the printer or you can use the bigger one of the two-sided open ended wrench that comes in the toolset.  
-The following picture shows the height gauge that sometimes comes with the printer - if you don't have it and don't want to use the mentioned wrench, you can download [the gcode file](https://cdn.shopify.com/s/files/1/0245/5519/2380/files/Height_gauge.rar?v=1667814312) from Anycubic's support page and print it.  
+The procedure about how to adjust the position will be described for the specific printer model in the following section as well. 
 
-![ABL height gauge](../assets/images/abl-gauge_web.jpg)
-
-The procedure about how to adjust the position will be described in the following section. 
-
-The following picture shows the location of the ABL sensor at the printhead, looking at it from a bottom view angle - the ABL sensor is the part at the right side with the round orange tip.   
   
-![Orange tip of the ABL sensor at the right side](../assets/images/head_K2Pro_underside_web.jpg)
-    
-The ABL sensor itself is mounted in a plastic bracket which is then mounted to the metal backplate.  
-  
-![ABL sensor](../assets/images/head_K2Pro_abl-sensor_web.jpg)
-
-
 ---  
       
-#### Leveling The ABL Sensor
+### Leveling The ABL Sensor
 
 The tip of the ABL sensor should be ~2mm higher than the tip of the nozzle.  
 If it's too high, the sensor won't be able to detect the spring steel PEI plate and your nozzle will be driven into the build plate.    
@@ -172,13 +183,13 @@ So check if you need to level your ABL sensor in relation to the nozzle - this s
 
 The following picture shows a sensor of a different printermodel that should/has to be leveled (don't mind the tiny rest of filament at the tip of the nozzle which touches the paper instead of the nozzle itself though, I chipped it away before leveling everything).      
 
-![This sensor needs to be leveld](../assets/images/head_neo_ABL2level_web.jpg)
+![This sensor needs to be leveled](../assets/images/head_neo_ABL2level_web.jpg)  
 
-As I didn't get the plastic height gauge from Anycubic with my printer, I used the bigger one of those two-sided open ended wrenches. Check the parts that came with your printer, maybe you got the gauge shown in the following picture.  
+Therefore you can either use the ABL height gauge which sometimes comes with the printer or you can use the bigger one of the two-sided open ended wrench that comes in the toolset.  
+The following picture shows the height gauge that sometimes comes with the printer - if you don't have it and don't want to use the mentioned wrench, you can download [the gcode file](https://cdn.shopify.com/s/files/1/0245/5519/2380/files/Height_gauge.rar?v=1667814312) from Anycubic's support page and print it.  
 
 ![ABL height gauge](../assets/images/abl-gauge_web.jpg)
 
-If you didn't get this tool, you can also print yourself one: [ABL height gauge](https://cdn.shopify.com/s/files/1/0245/5519/2380/files/Height_gauge.rar?v=1667814312).  
 
 See the expandable textbox below for further instructions.  
 
@@ -198,7 +209,7 @@ See the expandable textbox below for further instructions.
 
 ---
 
-#### Dismounting The ABL Sensor
+### Dismounting The ABL Sensor
 If you want to change the ABL sensor, take off the blue plastic housing of the printhead.  
 Make sure to not rip off the wires of the part cooling fan.  
 Then you'll already see the hexagon socket screw which holds the bracket of the sensor in place.  
@@ -215,26 +226,33 @@ See the expandable textbox below for further instructions.
 ??? example "Remounting Procedure"
 
     For remounting, just follow the steps of dismounting in reverse:  
-    
     - Place the sensor in the bracket and mind the correct position which you measured before taking the old one out.  
     - Make sure you're using the right screw and don't overtighten it though - as my father (R.I.P.) used to say: "After tight comes loose!" (roughly translated ;) ).  
     - Reconnect the wiring.  
     
     
+
 !!! warning "Attention"
 
     If you dis- and remounted the ABL sensor, make sure to level the ABL sensor again and control your Z offset!  
+
 
 ---  
   
 ## Extruder / Feeder Gear System
 This machine is using a direct drive, double gear extruder/feeder system (4:1 ratio).  
 
-When you take off the blue plastic cover of the printehad, you can see the ..
+At the right side of the printhead's plastic cover you can see a hole with an arrow around it and the word "Tighten" next to it. In that hole there is a screw located which you have to use for adjusting the feeder gear tension.  
 
+| Right side | Closeup view screw location | 
+|:----------:|:---------:|
+| ![Printhead right](../assets/images/head_K2_side-right_web.jpg) | ![Closeup view screw](../assets/images/head_K2Pro_feeder-gear-tensioner_web.jpg) | 
 
-At the right side of the printhead's plastic cover you can see a hole. In there is a screw which you have to use for adjusting the feeder gear tension.  
-![Feeder gear tensioner](../assets/images/head_K2Pro_feeder-gear-tensioner_web.jpg)  
+When you take off the blue plastic cover of the printhead, you can see the extruder gearbox above the black metal heatsink. The following picture shows the gearbox with the three corresponding screws being marked.  
+
+![Feeder gearbox](../assets/images/head_K2_extruder-screws-marked_web.jpg)  
+
+Please see the next section if you have to disassemble the feeder gear.  
 
 ??? tip "Can't Load New Filament?!"
 
@@ -245,21 +263,9 @@ At the right side of the printhead's plastic cover you can see a hole. In there 
     If you did so and were able to insert the filament but it seems that it's getting stuck lower down in the hotend, then you might hit the end of the nozzle with an edge of your filament. It helps when you cut the filament in a 45° angle and bend the part you're manually feeding into the hotend so that it's pretty straight.  
     If you still can't get your filament loaded, it's most likely that the PTFE tube inside of the hotend is clogged or deformed or that you have a clog in or above the nozzle somewhere. To clean, inspect and maintain it, you need to disassemble the hotend. Check the section ["Disassembling The Hotend"](#disassembling-the-hotend) further down below for more information.   
   
-<!--
-The following picture shows the extruder/feeder of the **Neo** with the mounted plastic cover of the printhead.  
-  
-![Direct drive of the Neo](../assets/images/head_neo_directdrive_web.jpg)
-  
-At the top in front of the little hole where the filament is inserted you find a little lever for manual release of the tension while loading/unloading the filament. The screw in the front adjusts the pressure of the feeder gear which is brought onto the filament. The following picture shows the mechanism without the plastic cover.  
-  
-![Feeder top view](../assets/images/head_feeder_topview_web.jpg)
-  
-You can access the inside of the feeder system by dismounting the heatsink, which is located at the right side underneath the heatsink fan. The following picture shows the inside of the system.  
 
-![Feeder inside](../assets/images/head_neo_feeder-inside_web.jpg)  
--->
   
-!!! warning "Retraction Settings"
+??? info "Retraction Settings"
 
     Make sure that you set the retraction distance and speed to the correct values for a direct drive in conjuction with a Volcano nozzle!  
     In general, it's supposed to be something around 1mm retraction *distance* for direct drive systems, when using a Volcano nozzle you should be fine going up to 2mm. A bit more might work well also, but you don't want to risk pulling the hot and melted filament up in the cold zone of the heatbreak, so don't exxagerate increasing the retraction distance.  
@@ -280,36 +286,38 @@ You can access the inside of the feeder system by dismounting the heatsink, whic
 
 ---
 
-#### Disassembling The Feeder Gear
+### Disassembling The Feeder Gear
 
-(..needs to be added..)   
+If problems with the feeder gear occur, you have to open the feeder gear box or even disassemble the whole system for cleaning, further inspections or replacing certain parts.  
+Especially when printing soft material like TPU, it can happen that filament gets wind up and jammed in the feeder gear which you then can't pull out.  
+Besides that, residues or abrasion can build up in the feeder gear system, so it's good to check this and do a proper cleaning when facing extrusion issues.   
 
-<!--
+Please see the expandable textbox below for further instructions about how to open the feeder gear box to get access to the interior parts.  
+
 ??? example "Disassembling Procedure"  
 
-    - There is a metal part with cooling fins underneath the 'big' fan at the right side, this is the heatsink. <br> ![Metal plate with cooling fins](../assets/images/head_neo_cooling-fins_web.jpg)  
-    - This heatsink is secured by three screws as you can see at the following picture. <br> ![The three screws holding the metal plate](../assets/images/head_neo_screws-cooling-plate_marked_web.jpg)  
-    - If you unscrew those three hexagon socket screws and take the heatsink off, you can get a closer look at the gears of the feeder system. <br> ![Neo feeder gear system](../assets/images/head_neo_feeder-inside_web.jpg)  
-    - The following picture shows the feeder gear properly assembled. <br> ![Feeder gear assembled](../assets/images/head_neo_feedergear-assembled_web.jpg)  
-    - The following picture shows the feeder gear being completely disassembled with the parts arranged at their (approximately) position where they belong. <br> ![Feeder gear disassembled](../assets/images/head_neo_feedergear-disass_web.jpg)  
-    - The following picture shows the disassembled feeder gear, the heatsink fan and the ABL sensor next to each other with the belonging screws placed at the (roughly) belonging position of the components. <br> ![Feeder gear and parts](../assets/images/head_neo_feeder-and-parts_web.jpg) <br> So from right to left this is how it'll look when you disassemble the belonging parts. The two little screws below the heatsink are the ones which hold the heatbreak in place. Mind the three long screws for that heatsink - the two longer ones are used at the left side, the slightly shorter one is used in the bottom right corner.
+    - When you take off the blue plastic cover of the printhead (Attention: disconnect the part cooling fan cable when taking off the head's cover!), you can see the extruder gearbox above the black metal heatsink. The following picture shows the gearbox with the three corresponding screws being marked.  
+      ![Feeder gearbox](../assets/images/head_K2_extruder-screws-marked_web.jpg)   
+    - If you're really careful to not rip off any wires, you can leave everything besides the ABL probe connected and leave the breakout board in it's location as well.  
+    - Unscrew those three screws and carefully take off the corresponding lid of the feeder gear box as shown in the following picture. When doing so, be careful to neither lose any parts nor rip off any wires or connectors!  
+      ![Feeder gearbox open](../assets/images/head_K2_extruder-open_web.jpg)  
+    - Now you can see the interior. The following pictures show some close-up views of the parts, starting with the lid where you can also see the lever and the corresponding spring.  
+      ![Feeder gearbox lid](../assets/images/head_K2_gearbox-lid_web.jpg)  
+      ![Feeder gearbox lid gear](../assets/images/head_K2_gearbox-lid-closeup_web.jpg)  
+      ![Feeder gearbox base](../assets/images/head_K2_gearbox-base_web.jpg)  
+      ![Feeder gearbox base gear](../assets/images/head_K2_gearbox-base-middle_web.jpg)  
+      
+    *Whatever you now have to do about further disassembling, pay special attention to the location of the parts before taking apart anything and make sure to not lose anything!*  
+   
 
-    ??? info "Dimensions Of The Spring"
-
-        As the question arised about the dimensions of the spring being used which applies the tension to the feeder gear (in case you lost it and need to find a suitable replacement), here are the dimensions of it:  
-    
-        - overall length: ~12-12.5mm
-        - length completely compressed: hard to tell as it's pretty stiff, I'd say around 6-7mm
-        - spring steel thickness: 1mm
-        - windings (except the 'closed' loops at both ends): 4
-        - outer diameter: ~7.1mm
-        - inner diameter: ~5.1mm
   
 ??? example "Reassembling Procedure"
 
-    For reassembling, just put everything back together by proceeding the steps of disassembling in reverse. Make sure you're using the right screws and don't forget any of them.  
-    Don't overtighten the screws though - as my father (R.I.P.) used to say: "After tight comes loose!" (roughly translated ;) ).  
--->
+    For reassembling, just put everything back together by proceeding the steps of disassembling in reverse.  
+    Make sure that everything is in the correct location and that everything aligns how it should.  
+    When putting on the lid, make sure it really sits in the correct position and that there's no gap when putting in the three screws to secure the lid.   
+    When screwing in the screws that hold the lid in place, don't overtighten the screws - as my father (R.I.P.) used to say: "After tight comes loose!" (roughly translated ;) ).  
+
 
 ---
 
@@ -385,7 +393,8 @@ The assembled hotend is shown in the following picture.
 
 ??? info "Spare Part Hotend"
 
-    - At the time of writing there are already 3rd party hotends available. Look out for "Anycubic Kobra 2 Hotend" or similar. You can find a complete hotend including the thermistor and cartrdige heater for around 15 bucks.      
+    - You can find compatible hotends from 3rd party manufacturers for around 5 bucks already at sites like Amazon, ebay and AliExpress. Look out for "Anycubic Kobra 2 Hotend" or similar. They come completely assembled with all the parts like thermistor, cartridge heater, silicone sock etc.  
+      I'd suggest to always have a spare one in the drawer, just in case.    
     - If the old thermistor and/or cartridge heater are still good and the wires aren't harmed, you don't have to look around for getting new ones! Just take the existing ones out of the old heater block and install them into the new one.    
     - However, scroll down and check out the "Disassembling" section below to see how to dis- and reassemble it. *Maybe you don't need new parts, so try to clean up everything first and reassemble it before ordering new parts right away.*    
   
@@ -466,7 +475,7 @@ If you need to dismount the hotend from the printhead to change it or if you nee
     - Then push the heatbreak back into the specific hole of the heatsink - make sure you push it deep enough (I personally push it as far into it as it goes).  
     - Turn the hotend so that the wires which are coming from the heater block are hanging freely and aren't bent too much.  
     - Then tighten up the two grub screws at the heatsink which hold the heatbreak in place, so that the hotend doesn't turn or wiggle anymore (but don't overtighten the screws though).  
-    - Plug in the cartidge heater and thermistor back into their corresponding connectors.  
+    - Plug in the cartridge heater and thermistor back into their corresponding connectors.  
     - Turn on the printer and heat up the nozzle to ~230-240°C. Once the temperature is reached, tighten up the nozzle with about 1.5NM force.  
       **Make sure to hold the heater block in place with an adjustable wrench or spanner and strictly avoid any movement of it - make sure to not pinch or harm any wires while doing so!**  
     - Once everything is done, reconnect the part cooling fan to the breakout board and mount the plastic cover.   
@@ -630,7 +639,7 @@ Both PTFE tubes have the outer diameter of ~4mm and the inner diameter of ~2mm a
 ---
 
 ### Reverse Bowden  
-The reverse bowden tube, which is the PTFE tube between the printhead and the filament runout sensor, is about ??mm long.  
+The reverse bowden tube, which is the PTFE tube between the printhead and the filament runout sensor, is about 400mm long.  
 It acts as a guidance and protection for the fed filament and is clipped onto the wiring of the printhead.    
 
 (add pic)  
@@ -764,7 +773,7 @@ The following pictures show the stock silicone sock from different angles.
   
 ## Thermistor 
 The thermistor which is used is a capsuled 100k NTC "EPCOS 100K B57560G104F" type.    
-The diameter is 3mm, the length is about 5.5mm. It comes with a short wiring and the specific connector (JST PH 2.0 (?)) attached.  
+The diameter is 3mm, the length is about 5.5mm. It comes with a short wiring and the specific connector (JST PH 2.0) attached.  
 
 The following picture shows the stock thermistor being used.  
 
@@ -777,7 +786,7 @@ The thermistor is plugged into the belonging hole of the heater block and is the
 ![Thermistor and block](../assets/images/head_K2Pro_thermistor-block-screw_web.jpg)  
 
 
-The following picture shows the connector being used, it's a two pin JST PH-2.0 (?) type.  
+The following picture shows the connector being used, it's a two pin JST PH-2.0 type.  
 
 ![Thermistor connector](../assets/images/head_K2Pro_thermistor-plug.jpg)
 
@@ -902,7 +911,7 @@ If you need to replace the thermistor of the hotend, see the expandable textbox 
 
 ## Cartridge Heater
 
-The cartidge heater which is used is a **24V 60W** element.  
+The cartridge heater which is used is a **24V 60W** element.  
 The diameter is 6mm, the length of the original part is about 18mm. The stock part comes with a short wiring and the specific two pinned [Molex Micro-Fit 3.0 (item-no. 43645-0200)](https://www.molex.com/en-us/products/part-detail/436450200) connector attached.    
 
 The following picture shows the stock cartridge heater being used.  
@@ -1043,7 +1052,7 @@ Anycubic ships the printheads with a *proprietary* Volcano-like brass nozzle (0.
     - If you want to change the nozzle (*check out the expandable admonition below!*) and need to grab the heater block with a wrench, make sure you really just grab the heater block and never get any wires up in between - preferably grab the heater block from that sides where the wires don't come out.   
     - If you want to clean the nozzle using a brass brush for example, *never* do it when the printer is powered up and the heating process of the extruder is in progress to avoid causing a shortcut by touching the contacs with the brush.  
     - *Make sure you DON'T turn the heater block!* In case you want to change the nozzle, you don't want to loosen the heater block from the hotend, so just hold the heater block in place without turning it.     
-    - *Don't do cold pulls for cleaning a nozzle when using any kind of coated nozzles!* This also involves hardened steel nozzles! Referring to the manufacturers, the coating might be harmed when doing so.      
+    - *Don't do cold pulls for cleaning a nozzle when using any kind of coated nozzles!* This also involves hardened steel nozzles! Referring to the manufacturers, the coating might be harmed when doing so.     
     
 ??? info "About Nozzles In General" 
 
@@ -1054,7 +1063,7 @@ Anycubic ships the printheads with a *proprietary* Volcano-like brass nozzle (0.
   
     - If you want to print filaments that are more abrasive, you probably want to go with nozzles made from plated copper, stainless or hardened steel, ruby sapphire nozzles and so on. Check out the web for further and more specific information about what to choose.  
       Be aware of the fact though, that the manufacturers *clearly advise against doing cold pulls with any kind of coated nozzles*! This also involves hardened steel nozzles! Referring to them, the coating might be harmed when doing so.  
-    
+
 ??? info "About Nozzle Sizes"  
 
     When it comes down to choose the right nozzle size, it all depends on what you want to print and how detailed it should be. The standard size of 0.4mm the printers come with is a good starting point.  
@@ -1084,8 +1093,7 @@ Anycubic ships the printheads with a *proprietary* Volcano-like brass nozzle (0.
     - I personally use plated copper heater blocks at my printers, even tho I'm not going for the highest possible speed. Imho it made a difference due to the increased thermal mass of the heavy copper block vs the aluminum block.   
     - Depending on what speeds should be reached and how big the nozzle will be in the end, it *might* be good/useful to also use a more powerful heater cartridge when already changing the heater block to a plated copper one. This shouldn't be necessary for the typical user tho as the stock one is 60W and that's usually plenty enough, but just in case one really wants to push the limits, it might be good to have an extra 10W or so and use a 70W heater instead.  
 
-  
-    
+   
   
 ---
 
@@ -1223,12 +1231,51 @@ If you need to change the nozzle, mind the warnings from above and check out the
 
 ## Part Cooling Fan  
 
-The part cooling fan is a 24V, 0.14A, 50x50x20mm blower, model "Coolcox BF5020H24D".  
+The part cooling fan is a 24V, 0.2A, 50x50x20mm blower, model "Coolcox BF5020H24S".  
 
-According to the [specifications of the manufacturer](https://www.coolcox.com/products/pdf/BF5020_a.pdf), the bearing type of this fan is a 2-ball bearing. The current is listed as 0.08A, even though the label at the fan itself states 0.14A. The fanspeed is listed with 5000rpm, Anycubic states at the product page 7000rpm though. The air flow is listed with 6.0 CFM and the noise level is listed with 34.0 dBA.  
+According to the [specifications of the manufacturer](https://www.coolcox.com/products/pdf/BF5020_a.pdf), the bearing type of this fan is a sleeve bearing. The current is listed as 0.08A, even though the label at the fan itself states 0.2A. The fanspeed is listed with 5000rpm, the air flow is listed with 6.0 CFM and the noise level is listed with 34.0 dBA.  
 
-![Coolcox BF5020H24D front](../assets/images/head_K2Pro_part-cooling-fan_web.jpg)  
+![Coolcox BF5020H24S front](../assets/images/head_K2_part-cooling-fan_web.jpg)  
 
+<!---
+
+### MOD: Different Part Cooling Fan
+If you want to use a different part cooling fan, first of all you need to make sure that you got yourself one which runs at 24VDC.  
+
+However, you might then face the problem that you won't be able to control it's speed properly. Means, it might work in an on/off state only.  
+Being able to control the speed and let it run at e.g. 40% instead of 100% is caused by the PWM control of the fan.  
+PWM (= pulse width modulation) basically is (usually) being realized by switching the GND of the fan's connection on and off in a certain frequency.  
+
+However, the problem with this is that a) not all fans work fine with this (generally speaking) and b) that some fans work better with a high frequency and other work better with a low frequency.   
+The frequency which is set in the stock firmware is 20kHz - which is pretty high. So if you get yourself a different fan and you can't control it's speed properly, the first thing to have a look at is trying to change the frequency which is being used for PWM.  
+Now this isn't easy to change with the stock firmware, as that would mean that you'd have to recompile the sources of the stock Marlin firmware after changing the belonging settings. But as we can run Klipper just fine on these machines, this would be the comfortable solution to test different frequencies (besides that, I personally *strongly* recommend using Klipper anyway..).  
+
+So my suggestion would be: flash Klipper (see the chapter ["Klipper (MOD)")(firmware/fw_klipper.md)), set everything up for your specific machine and once everything is running fine, try different frequencies for the part cooling fan.  
+The belonging section in the `printer.cfg` for the part cooling fan is this:  
+```
+[fan]
+pin: PB5
+cycle_time: 0.000050
+```
+As you can see, you don't find a setting called "frequency" or so, but there's the setting called "cycle_time" which is second(period) - this is the setting for the frequency. So you do *not* enter a specific frequency value in hertz here, but you have to calculate the specific value for s(p)=Hz instead.   
+The value which is set there right now is "0.00005" - which is 20kHz as the setting in the stock firmware.  
+The default setting of Klipper for this is "0.1" - which is 100Hz.  
+So you can now use e.g. an online tool like [this one](https://www.unitjuggler.com/convert-frequency-from-Hz-to-s(p).html) and calculate the belonging "cycle_time" value for the specific frequency in hertz you want to try. So calculate it, then change the according setting, save and restart the firmware and try with the slider in the Mainsail UI (or whichever frontend you're using) if the fan works how it should.  
+
+Just as an example so that you get the idea and the concept, I'll list some values here:  
+
+| Frequency (Hz) | cycle_time (s(p)) |
+|:----------:|:---------:|
+| 20 | 0.05 |
+| 100 | 0.01 |
+| 125 | 0.008 |
+| 200 | 0.005 |
+| 1000 | 0.001 |
+| 2000 | 0.0005 |
+| 5000 | 0.0002 | 
+| 10000 | 0.0001 |
+| 20000 | 0.00005 |
+-->  
 
 ---
 
@@ -1236,7 +1283,7 @@ According to the [specifications of the manufacturer](https://www.coolcox.com/pr
 
 The fan duct for the 5020 part cooling blower fan has two outlets at the sides as the following picture shows.  
 
-![Part cooling fan duct](../assets/images/head_K2Pro_part-cooling-fanduct_mounted_backside_web.jpg)  
+![Part cooling fan duct](../assets/images/head_K2_part-cooling-fanduct_web.jpg)  
 
 Mind the additional opening at the left handed side in the picture - it seems to be there for cooling the ABL sensor. I don't know yet if this additional opening results in a lack of part cooling at that specific side.   
 
