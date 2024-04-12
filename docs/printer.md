@@ -37,7 +37,7 @@ The following list gives an overview of the most important specifications:
 - Z-axis: double threaded rod  
 - Printing speed: 300 mm/s (maximum speed), 300mm/s (typical/average speed)
 - Control panel: 4.3" LCD touchscreen  
-- Mainboard: TriGorilla Pro B V1.0.2, HDSC HC32F460 200MHz Cortex-M4, 32bit, 24V, TMC2208(?) silent stepper drivers (soldered), USB-C connector, microSD cardreader  
+- Mainboard: TriGorilla Pro B V1.0.2, HDSC HC32F460 200MHz Cortex-M4, 32bit, 24V, TMC2208 silent stepper drivers (soldered), USB-C connector, microSD cardreader  
 - Extruder / feeder system: direct drive, double gears  
 - Heated aluminum bed with a magnetic foil glued onto it, comes with a removable, single side PEI-coated spring steel plate; *physical dimensions: 230x230mm*  
 - Hot bed temperature: 110 °C / ≤ 230 °F  
