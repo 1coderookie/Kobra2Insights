@@ -10,14 +10,14 @@
 | **Y-Axis Belt**: GT-2, 8mm width, ~770mm total length |
 | **Y-Axis Belt Tensioner Pulley**: 3mm(??) ID / 16(??) teeth (for 8mm wide belt) (--> need to check specs again!) |
 | **X- & Y-Axis Linear Rail System**: SG15 bearings, chrome-plated stainless steel rods, ??mm OD (--> need to check specs again!) |
-| **X-Axis Motor**: 42x34 Nema17, 1.8°, 200 steps, 5mm shaft with 20(??) teeth pulley (5mm bore) attached (for 6mm wide belt) (--> need to check specs again!) |
-| **Y-Axis Motor**: 42x48 Nema17, 1.8°, 200 steps, 5mm shaft with 16 teeth pulley (5mm bore, 11mm teeth length) attached (for 8mm wide belt) (--> need to check specs again!) |
+| **X-Axis Motor**: 42-34 Nema17, 1.8°, 200 steps, 5mm shaft with 16 teeth pulley (5mm bore) attached (for 6mm wide belt) (--> need to check specs again!) |
+| **Y-Axis Motor**: 42-48 Nema17, 1.8°, 200 steps, 5mm shaft with 16 teeth pulley (5mm bore, 11mm teeth length) attached (for 8mm wide belt) (--> need to check specs again!) |
 | **Z-Axis Lead Screws**: T8x8 (8mm diameter, 8mm lead, 2mm pitch, 4 starts), 350mm length, 10mm and ~23mm unthreaded 5mm OD shaft, belt-driven dual z  |
 | **Z-Axis Timing Belt**: GT-2, 6mm width, closed loop, length 600mm |
 | **Z-Axis Lead Screw Pulleys**: 20(??) teeth (5mm bore) (for 6mm wide belt) (--> need to check specs again!) |
 | **Z-Axis Anti-Backlash Nut**: POM, spring loaded, 8mm inner diameter, 20mm distance between mounting screws (18mm will fit as well due to elongated holes at the bracket!) |
 | **Z-Axis V-Slot Wheels**: POM, ~24x10.2mm with 6mm width at the tip of the "V", 625 type ball bearing with 5mm inner diameter |
-| **Z-Axis Motor**: 42x34 Nema17, 1.8°, 200 steps, 5mm shaft |
+| **Z-Axis Motor**: 42-34 Nema17, 1.8°, 200 steps, 5mm shaft |
 | **Z-Axis Motor Coupler**: rigid coupler, 5mm bore at both sides |
 | **Limit Switches**: x- & y-axis = mechanical, NO (= normally open) ; z-axis = no physical switch given, probe acts as virtual endstop |
 
@@ -142,7 +142,7 @@ You should inspect the belts and the belonging parts like pulleys etc from time 
 ---
 
 ### X-Axis Motor
-The motor of the x-axis is a 42-34 Nema 17 stepper motor with a 20 teeth pulley being attached to the 5mm motor shaft.  
+The motor of the x-axis is a 42-34 Nema 17 stepper motor with a 16 teeth pulley being attached to the 5mm motor shaft.  
 It seems to be a regular 1.8° stepper, which means the shaft turns 1.8° at each steps, and therefore it's doing 200 steps for one full 360° rotation.  
 The motor is located at the left hand side of the x-axis gantry.  
 
@@ -224,14 +224,27 @@ The following picture shows the back side of the meatl plate the printhead is mo
 
     ![Eccentric nut](../assets/images/eccentric-nut_web.jpg)   
 
+    The following picture shows an eccentric nut on it's own.  
+    ![Ecc nut solo](../assets/images/eccentric_nut2_web.jpeg)  
+
     As you hopefully can see, the bolt isn't centered - so if you turn that eccentric nut while being mounted, the position of the bolt and therefore the whole bearing will be changed, either towards or away from the rail it's sitting at.  
 
-The bearings shouldn't sit too tight at the rail but also not too loose.  
-They should touch the rail and should sit in place well without any sort of wobbling and they should be able to move smoothly.  
-On the other hand, they also shouldn't be too loose or far away from the rail which would lead to instability.  
-The printhead shouldn't wiggle but it has to be able to move freely.   
+
+For a better understanding of these parts, the following picture shows them being dismounted from the gantry with the SG15 bearing still being attached.  
+
+![Ecc nuts vs posts](../assets/images/ecc-nut_vs_bolt_web.jpeg)  
+
+
+The bearings shouldn't sit too tight onto the rail but also not too loose.  
+On the other hand, they also shouldn't be too loose or far away from the rail which would lead to instability - the gantry shouldn't wiggle but it has to be able to move freely and without much of a force being applied.   
+So, in a summary: the SG15 bearings should touch the rail and sit on it well without any noticeable amount of play which would cause a wiggeling, but they should still be able to move smoothly.  
+The following picture shows a bearing which is too far away from the rail, you can clearly see the huge gap between the rail and the grove of the bearing (circled in red). On the right you can see properly positioned bearing which sits perfectly on the rail (circled in green) - don't mind the tiny gap there, that's due to the shape of both parts which don't fit 100%.   
+
+![SG15 positioned](../assets/images/SG15_positions_web.jpg)  
+
+When adjusting the position, don't only judge by the look though, as that could lead to a bearing which is running way too tight and therefore an increased amount of friction and higher degree of wear & tear.     
     
-Make sure they're assembled correctly and line up with the rail as well - if they're out of alignment and don't run correctly along the rail, you'll experience a massive wear and tear. Same goes for the bearings being too tight.  
+Besides their position on the rail itself, make sure the bearings and the posts/nuts/bolts are assembled correctly and line up with the rail as well - if they're out of alignment and don't run correctly along the rail, you'll experience a massive wear and tear as well.  
 
 
 ---
@@ -295,7 +308,7 @@ The following pictures show the limit switch from two different point of views.
 ??? example "Limit Switch Problem"
 
     If you encounter the problem that the limit switch won't be hit sufficiently for being triggered sucessfully, move the printhead manually against it (with the blue plastic cover of the printhead removed) and observe what might cause the problem. Most of the cases the whole blue plastic cap isn't in the correct position, so check that and try to adjust the position, so that it can be triggered sucessfully.  
-
+   
   
 ---
 
@@ -311,7 +324,7 @@ Plus, you'll find information about *how to tram the x-axis gantry, which is cru
 
 ### V-Slot Wheels 
 The x-axis gantry is moving along the z-axis aluminum profile driven by the z-axis lead screws, guided by v-slot wheels.  
-They run in the v-slot of the vertical z-axis rails and therefore they should sit in a perfect position.  
+They run in the v-slot of the z-axis profiles and therefore they should sit in an optimal position.  
 
 ![POM wheel](../assets/images/POM-wheel_web.jpg)  
 
@@ -326,6 +339,7 @@ The downside is that they'll wear off pretty quick if they're running too tight 
     Make sure to *never* use WD-40 for trying to lubricate either the wheels or bearings - the solvents in the WD-40 will destroy the POM wheels!    
 
 
+
 ---
 
 #### Position
@@ -334,11 +348,15 @@ The following picture shows an eccentric nut (in this case mounted to a POM whee
 
 ![Eccentric nut](../assets/images/eccentric-nut_web.jpg)   
 
+The following picture shows an eccentric nut on it's own.  
+
+![Ecc nut solo](../assets/images/eccentric_nut2_web.jpeg)  
+
 As you hopefully can see, the bolt isn't centered - so if you turn that eccentric nut while being mounted, the position of the bolt and therefore the whole bearing will be changed, either towards or away from the rail it's sitting at.   
 
 *Not all of the wheels have eccentric nuts though as the following pictures show, only the two wheels (one at each side) which are facing the inner side of the frame (towards the bed) do have an eccentric nut.*  
     
-![ecc nuts positions](../assets/images/axes_x-ecc-nuts_web.jpg)   
+![ecc nuts positions](../assets/images/axes_x-ecc-nuts_web.jpg)  
   
 However, you might face the problem that you just can't get all of the three wheels at each side to touch the aluminum frame as they should.  
 So if you need to adjust the position of the wheels using the eccentric nuts, you might encouter the problem that e.g. the inner wheel and the lower wheel on the outside may sit in the v-slot really nice, but that the third wheel (the upper one on the outside in this example) isn't even touching the aluminum and can be spinned in the air. This also leads to a wobbly and sagging/lagging x-axis gantry at the unsupported right side, as you'll most likely be able to move the right part (the side without the lead screw) up and down a bit.   
@@ -628,7 +646,7 @@ You should inspect the belts and the belonging parts like pulleys etc from time 
 ---
 
 ### Y-Axis Motor
-The motor of the y-axis is a 42-48 Nema 17 stepper motor with a 20 teeth pulley being attached to the 5mm motor shaft.  
+The motor of the y-axis is a 42-48 Nema 17 stepper motor with a 16 teeth pulley being attached to the 5mm motor shaft.  
 It seems to be a regular 1.8° stepper, which means the shaft turns 1.8° at each steps, and therefore it's doing 200 steps per one full 360° rotation.  
 
 ![Y-axis motor](../assets/images/axes_K2Pro_Y-motor_web.jpg)  
@@ -709,13 +727,27 @@ You can actually see them better when looking at it from the right side.
 
     ![Eccentric nut](../assets/images/eccentric-nut_web.jpg)   
 
+    The following picture shows an eccentric nut on it's own.  
+    ![Ecc nut solo](../assets/images/eccentric_nut2_web.jpeg)  
+
     As you hopefully can see, the bolt isn't centered - so if you turn that eccentric nut while being mounted, the position of the bolt and therefore the whole bearing will be changed, either towards or away from the rail it's sitting at.  
+
+
+For a better understanding of these parts, the following picture shows them being dismounted from the gantry with the SG15 bearing still being attached.  
+
+![Ecc nuts vs posts](../assets/images/ecc-nut_vs_bolt_web.jpeg)  
+
 
 The bearings shouldn't sit too tight onto the rail but also not too loose.  
 On the other hand, they also shouldn't be too loose or far away from the rail which would lead to instability - the gantry shouldn't wiggle but it has to be able to move freely and without much of a force being applied.   
 So, in a summary: the SG15 bearings should touch the rail and sit on it well without any noticeable amount of play which would cause a wiggeling, but they should still be able to move smoothly.  
+The following picture shows a bearing which is too far away from the rail, you can clearly see the huge gap between the rail and the grove of the bearing (circled in red). On the right you can see properly positioned bearing which sits perfectly on the rail (circled in green) - don't mind the tiny gap there, that's due to the shape of both parts which don't fit 100%.   
+
+![SG15 positioned](../assets/images/SG15_positions_web.jpg)  
+
+When adjusting the position, don't only judge by the look though, as that could lead to a bearing which is running way too tight and therefore an increased amount of friction and higher degree of wear & tear.     
     
-Make sure they're assembled correctly and line up with the rail as well - if they're out of alignment and don't run correctly along the rail, you'll experience a massive wear and tear. Same goes for the bearings being too tight.  
+Besides their position on the rail itself, make sure the bearings and the posts/nuts/bolts are assembled correctly and line up with the rail as well - if they're out of alignment and don't run correctly along the rail, you'll experience a massive wear and tear as well.  
              
     
 ---  
@@ -920,9 +952,6 @@ This means, that the lead screw which is driven by the motor drives the second l
 If you think the timing belt doesn't have the correct tension *even though the bearing blocks are adjusted and the lead screws do have the exact same distance towards each other*, you can add an adjustable tensioner/idler pulley for the timing belt.    
 
 You can either get yourself one of those aluminum plates or print yourself an according bracket where you then mount a pulley to. The mounting plate itself can then be mounted by screwing two screws into the two threads located at the blue plastic bar at the top.    
-
-(add link to models)
-
 I'd suggest to add a teethed pulley to the inner side of the belt. Of course you can also use a pulley with no teeth and place it on the outer side where the belt doesn't have teeth, but in that case the belt will be bent against it's usual bending direction, which *might* affect the lifespan of it negatively.  
 
 
@@ -930,15 +959,9 @@ I'd suggest to add a teethed pulley to the inner side of the belt. Of course you
 
 #### MOD: Z-Axis Driven By Two Motors
 As this machine uses the same mainboard like the Kobra 2 Max/Plus, there is one free connector at the mainboard for connecting a second z-axis motor.  
-
-![Free connector for 2nd z motor](../assets/images/mobo_2nd-z-connector_web.jpg)  
-
-Theoretically speaking, you *should* be able to get rid of the belt system and drive the second lead screw with an own motor instead by simply connecting it.  
+Since it's done this way at the Kobra 2 Plus and Max, you could add a 2nd z-motor and connect it to the free connector.   
 Mind that both motors will still be driven by the same stepper driver though, so you won't be able to use the advantages of two independent stepper drivers/motors anyway.  
-
-However, I personally didn't do that and most likely I won't as there aren't any advantages (imho) to the timingbelt driven system.  
-As a matter of fact, you'll actually have disadvantages: additional load is put onto the stepper driver and the x-gantry could come out of alignment when accidentally pushing one side down. At a timingbelt driven system this isn't a problem as both screws are connected to each other and therefore both screws will turn if you accidentally push down one side of the x-gantry.  
-But this is just my personal opinion, so if you added a second z-motor, please reach out via email (see footer) with a picture so that other users can see your solution.  
+However, I personally didn't do that and most likely I won't as I don't see any real advantages here for a machine of this size.   
 
 ---
 
@@ -955,7 +978,7 @@ Both lead screws are held in position with a bearing block at the top where the 
 
 ??? tip "Add Screws"  
 
-    As you can see in the picture, it seems like Anycubic forgot to add screws to hold the bearing in place. The holes are threaded, so I'd suggest to grab some M? screws and put them in.  
+    As you can see in the following picture on the left, it seems like Anycubic forgot to add screws to hold the bearing in place, so I'd suggest to add some M3 screws.  
 
     | Missing screws | Screws added |
     |:--------------:|:-------------|
@@ -1095,7 +1118,6 @@ The following picture shows the stock coupler that is mounted.
 
 It's adviseable to swap out the rigid stock couplers and use flexible couplers instead. Those allow to compensate a minor misalignment of the z-axis lead screw setup.   
 
-If you want to change the coupler, you'll need to get a coupler which suits 5mm on one side and 8mm on the other side as the motor shaft is 5mm and the rod is 8mm in diameter.  
 Make sure you *don't* get a coupler which uses a grub/set screw that holds onto the shaft and rod itself, you need to get a coupler which uses some kind of a clamp mechanism as the stock one. The reason is simple: the motor shaft is round, it doesn't have a flat area where a grub screw needs to be screwn onto, same goes for the lead screw itself - so a clamping mechanism will just work better holding everything in place.  
 Besides that, using a clamp mechanism makes sure that the shaft and the lead screw are as centered as possible in the coupler - when using a coupler which uses grub/set screws that tighten against the shaft and the rod, you'll most likely end up with a coupler being mounted slightly off-center. 
 
@@ -1212,11 +1234,10 @@ The following picture shows an assembled Oldham Coupler at the left side. The on
 
 ![Oldham coupler](../assets/images/axes_oldhamcoupler_web.jpg)  
     
-!!! warning "An Oldham Coupler Is Additional Part"  
+    
+*An Oldham Coupler needs to be mounted between the bracket which holds the anti-backlash nut and the anti-backlash nut itself. So it's ***not replacing*** any part, it's an addition to the whole setup!*  
 
-    *An Oldham Coupler needs to be mounted between the bracket which holds the anti-backlash nut and the anti-backlash nut itself. So it's ***not replacing*** any part, it's an addition to the whole setup!*  
-
-    (..add pic..)  
+![Oldham coupler installed](../assets/images/axes_OC-installed_web.jpg)  
     
 You can look out for Oldham Couplers with a 18mm mounting hole distance (often they're advertised for being compatible with a Creality Ender 3) - BUT you'd have to swap out the stock anti-backlash nut and use one of the 'regular' spring loaded anti-backlash nuts with 18mm hole distance as the ones mentioned and shown in the expandable textbox "Changing The Anti-Backlash Nut" above (as the stock nut has 20mm distance between the holes which obviously doesn't match the 18mm of the Oldham Coupler).  
 
@@ -1288,7 +1309,7 @@ In the following expandable textboxes you'll find some notes and instructions ab
 
     If you need to disassemble the z-axis lead screw system, there are a few things that one should be aware of. Besides that, the necessary steps are pretty easy and self-explaing, so I'll go over them just really quick.  
     
-    - First, you should somehow fixate the gantry of the x-axis to get the load off of the lead screw. You can do so by e.g. putting two soupcans onto the bed, each on one side (left/right) and then lower the gantry until it rests onto them. Or you can move the gantry up and fixate it with some velcro straps or cable ties as shown in the picture below. <br> ![Parked x-axis gantry](../assets/images/axes_x-gantry-cableties_web.jpg)  
+    - First, you should somehow fixate the gantry of the x-axis to get the load off of the lead screw. You can do so by e.g. putting two soupcans onto the bed, each on one side (left/right) and then lower the gantry until it rests onto them. Or you can move the gantry up and fixate it with some velcro straps or cable ties to the blue plastic part at the top.  
     - Now unplug the wire from the stepper motor, just to be on the safe side. The printer itself is also switched off of course.  
     - Loosen the two screws at the coupler which conects the motor shaft and the lead screw. 
     - Now you can turn the lead screw by hand to screw it out of the anti-backlash nut. After you completely took it out, dismount the anti-backlash nut from the holder at the frame as well.  
