@@ -3,8 +3,6 @@
 
 # Printer Profiles & Slicers
 
-In the following you'll find some short notes on the most common slicers Cura, PrusaSlicer, SuperSlicer and OrcaSlicer and some notes on printer profiles for these slicers.  
-
 ---
 
 ## Printer Profiles
