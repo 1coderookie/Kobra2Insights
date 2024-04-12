@@ -555,7 +555,7 @@ Please see the belonging sections for further pictures and descriptions of the p
 
 The following picture shows the belt tensioner located at the front of the y-axis aluminum rail.  
 
-![Y-axis knob](../assets/images/axes_K2Pro_Y-axis-tensioner_web.jpg)
+![Y-axis knob](../assets/images/axes_K2Neo_Y-belt-tensioner_web.jpg)
 
 You can adjust the tension of the belt by turning it clockwise for increasing the tension and turning it counter-clockwise for decreasing it.  
 
@@ -954,14 +954,6 @@ If you think the timing belt doesn't have the correct tension *even though the b
 You can either get yourself one of those aluminum plates or print yourself an according bracket where you then mount a pulley to. The mounting plate itself can then be mounted by screwing two screws into the two threads located at the blue plastic bar at the top.    
 I'd suggest to add a teethed pulley to the inner side of the belt. Of course you can also use a pulley with no teeth and place it on the outer side where the belt doesn't have teeth, but in that case the belt will be bent against it's usual bending direction, which *might* affect the lifespan of it negatively.  
 
-
----
-
-#### MOD: Z-Axis Driven By Two Motors
-As this machine uses the same mainboard like the Kobra 2 Max/Plus, there is one free connector at the mainboard for connecting a second z-axis motor.  
-Since it's done this way at the Kobra 2 Plus and Max, you could add a 2nd z-motor and connect it to the free connector.   
-Mind that both motors will still be driven by the same stepper driver though, so you won't be able to use the advantages of two independent stepper drivers/motors anyway.  
-However, I personally didn't do that and most likely I won't as I don't see any real advantages here for a machine of this size.   
 
 ---
 
