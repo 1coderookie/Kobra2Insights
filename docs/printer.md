@@ -1,21 +1,21 @@
 <link rel=”manifest” href=”docs/manifest.webmanifest”>
 
 # Printer
-The Anycubic [**Kobra 2 Pro**](https://www.anycubic.com/products/kobra-2-pro) is a high speed FDM bedslinger style printer.  
+The Anycubic [**Kobra 2**](https://store.anycubic.com/products/kobra-2) is a high speed FDM bedslinger style printer.  
 It comes pre-assembled, you only have to mount a few parts like the 'upstanding' frame onto the base frame.  
 
 See [Anycubic's support page](https://www.anycubic.com/pages/firmware-software) of the Kobra 2 series to find manuals, firmware, video tutorials and more or use the direct links in the following.  
 
-- [Quick Start Guide](https://drive.google.com/file/d/1W63_4aYIETkF4itp7T5blioazcZqx0bY/view)
-- [User manual v1.2](https://drive.google.com/file/d/1FQqmJ4QByD2u3dPKmaZOCjRyONrfPE2q/view)
+- [Quick Start Guide v1.2](https://cdn.shopify.com/s/files/1/0245/5519/2380/files/Anycubic_Kobra_2_Quick_Start_Guide_V1.2-EN.pdf?v=1684724241)
+- [User manual v1.4](https://cdn.shopify.com/s/files/1/0245/5519/2380/files/Anycubic_Kobra_2_User_Manual_V1.4-EN.pdf?v=1684724252)
 
 
 
 The following pictures show the machine.  
   
-| Kobra 2 Pro frontview | Kobra 2 Pro backview |  
+| Kobra 2 frontview | Kobra 2 backview |  
 |:---------------------:|:--------------------:| 
-| ![Kobra 2 Pro front](assets/images/printer_K2Pro_front2_web.jpg) |  ![Kobra 2 Pro back](assets/images/printer_K2Pro_back_web.jpg) |  
+| ![Kobra 2 front](assets/images/printer_K2_front-full_web.jpeg) |  ![Kobra 2 Pro back](assets/images/printer_K2_back-full_web.jpeg) |  
 
 *Note: I didn't attach the filament spool holder to the left side of the machine as it should be done when taking these pictures for being able to put both pictures between each other in a decent size here.*   
 
@@ -29,15 +29,15 @@ The following list gives an overview of the most important specifications:
 
 - Printing dimension: 250 x 220 x 220 mm / 9.8 x 8.7 x 8.7 inches (HxWxD) 
 - Printing platform: 220 x 220mm / 8.7 x 8.7 inches (*Attention: the physical dimensions of the bed and the PEI plate are 230x230mm!*) 
-- Machine dimensions: 486 x 435 x 463 mm / 19.1 x 17.1 x 18.2 inches (HxWxD) (plus filament holder mounted to the left side of the base frame) 
+- Machine dimensions: 486 x 440 x 4435 mm / 19.1 x 17.3 x 17.1 inches (HxWxD) (plus filament holder mounted to the left side of the base frame) 
 - Machine weight: approx. 8.4 kg
 - Printing volume: 12.1 l / 3.2 gal
 - Aluminum frame  
 - X-axis and Y-axis: belt driven (belt tension can be adjusted by knobs), "dual-shaft core" with SG15 bearings/metal rollers (no POM wheels)   
 - Z-axis: double threaded rod  
-- Printing speed: 500 mm/s (maximum speed), 300mm/s (typical/average speed)
+- Printing speed: 300 mm/s (maximum speed), 300mm/s (typical/average speed)
 - Control panel: 4.3" LCD touchscreen  
-- Mainboard: TriGorilla Spe V1.0.0, 1.2GHz Cortex-A7, 32bit, 24V, TMC2209 silent stepper drivers (soldered), WiFi, 3x USB-A connectors 
+- Mainboard: TriGorilla Pro B V1.0.2, HDSC HC32F460 200MHz Cortex-M4, 32bit, 24V, TMC2208(?) silent stepper drivers (soldered), USB-C connector, microSD cardreader  
 - Extruder / feeder system: direct drive, double gears  
 - Heated aluminum bed with a magnetic foil glued onto it, comes with a removable, single side PEI-coated spring steel plate; *physical dimensions: 230x230mm*  
 - Hot bed temperature: 110 °C / ≤ 230 °F  
@@ -54,6 +54,7 @@ The following list gives an overview of the most important specifications:
 ## Box Content
 
 The printer comes partially preassembled and well packed in one big box.  
+Since I don't have a picture of the Kobra 2 in a box, let me show you the Kobra 2 Pro instead - the content and spare parts are pretty much the same.  
 
 ![Box content](assets/images/K2Pro_package_web.jpg)  
   
