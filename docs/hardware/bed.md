@@ -195,7 +195,7 @@ The bed uses a removable 230x230mm PEI-coated spring steel plate which makes it 
 The plate that comes with the printer is textured on both sides.    
 The following picture shows the surface from a close-up view.  
   
-![Close-up view of the PEI-coated plate](../assets/images/bed_closeup_web.jpg)  
+![Close-up view of the PEI-coated plate](../assets/images/bed_K2Pro_PEI-plate_web.jpg)  
 
 
 
