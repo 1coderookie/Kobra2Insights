@@ -17,7 +17,7 @@ The following pictures show the machine.
 |:---------------------:|:--------------------:| 
 | ![Kobra 2 front](assets/images/printer_K2_front-full_web.jpeg) |  ![Kobra 2 Pro back](assets/images/printer_K2_back-full_web.jpeg) |  
 
-*Note: I didn't attach the filament spool holder to the left side of the machine as it should be done when taking these pictures for being able to put both pictures between each other in a decent size here.*   
+
 
   
 
