@@ -63,7 +63,7 @@ Please mind the **search field** in the header as well as the icon in the header
 
     - *Thanks a lot to the **kind people who supported my work with a donation** to [my ko-fi account](https://ko-fi.com/U6U5NPB51)!*
     - *Thanks to the **stargazers** at GitHub for starring this repository!* 
-    - *Special thanks to **[FrostbittenFLboi]((https://www.reddit.com/user/FrostbittenFLboi)** and **[mralejo77]((https://www.reddit.com/user/mralejo77)** for providing me the necessary Kobra 2 specific pictures and specs for being able to create this infosite!*
+    - *Special thanks to **[FrostbittenFLboi](https://www.reddit.com/user/FrostbittenFLboi)** and **[mralejo77](https://www.reddit.com/user/mralejo77)** for providing me the necessary Kobra 2 specific pictures and specs for being able to create this infosite!*
     - Thanks to **[debeliq1](https://www.reddit.com/user/debeliq1)** for allowing me to use his picture of the wear&tear of the linear rail rod!
     - Thanks to **[Due-Telephone-6817](https://www.reddit.com/user/Due-Telephone-6817)** for taking those pictures of the spider coupler and the diaphragm coupler!  
     - Thanks to **[Fasthotrod](https://www.reddit.com/user/Fasthotrod)** for providing me the pics of the eccentric nut, eccentric nut vs rigid post and the mis- and well-positioned SG15 bearings!      
