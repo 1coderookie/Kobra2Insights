@@ -600,7 +600,7 @@ There are (besides the wiring for the aceleration sensor and the z-offset sensor
 Due to repetive motion and the design, these wires might start to break over time.  
 To be more precise: the thin strands of the wires inside of the insulation start to break. Therefore the resistance of those wires will increase until the point is reached that all of the strands are broken and there's no contact given anymore.  
 
-This breaking of the wires is a common issue at the Kobra Go and Neo, but here at the Kobra 2 Pro it seems that Anycubic used slightly longer wires. So hopefully this will not be such a common issue, but I'll go a bit into detail here anyway, just in case this problem occurs.  
+This breaking of the wires is a common issue at the Kobra Go and Neo, but here at the Kobra 2 it seems that Anycubic used slightly longer wires. So hopefully this will not be such a common issue, but I'll go a bit into detail here anyway, just in case this problem occurs.  
 
 In the beginning you'll most likely notice this when you have an error message appearing which tells you that the bedtemp is abnormal (I didn't come across the specific error message yet, so I can't tell you right now how exactly the message will be).  
 Even though you can fix this issue by replacing the wires of the thermistor as described in the next sections, sooner or later this will also happen with the thicker wires. And even though this can be fixed as well by replacing the wires, it's not as easy 'detectable' as with the wring of the thermistor, as there won't be an error message if strands of the 24V wires start to break and therefore the resistance becomes bigger.  
