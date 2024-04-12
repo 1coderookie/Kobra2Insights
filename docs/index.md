@@ -1,7 +1,7 @@
 <link rel=”manifest” href=”docs/manifest.webmanifest”>
 
 # Welcome  
-to my infosite about Anycubic's **Kobra 2 Pro**.   
+to my infosite about Anycubic's **Kobra 2**.   
   
 Here you'll find specific information about this specific printer model as well as more general kind of information.  
 
@@ -64,7 +64,7 @@ Please mind the **search field** in the header as well as the icon in the header
 
     - *Thanks a lot to the **kind people who supported my work with a donation** to [my ko-fi account](https://ko-fi.com/U6U5NPB51)!*
     - *Thanks to the **stargazers** at GitHub for starring this repository!* 
-    - Thanks to **[codexnovus](https://github.com/codexnovus/)** for allowing me to use his picture of the mainboard's pinout scheme!  
+    - *Special thanks to **[FrostbittenFLboi]((https://www.reddit.com/user/FrostbittenFLboi)** and **[mralejo77]((https://www.reddit.com/user/mralejo77)** for providing me the necessary Kobra 2 specific pictures and specs for being able to create this infosite!*
     - Thanks to **[debeliq1](https://www.reddit.com/user/debeliq1)** for allowing me to use his picture of the wear&tear of the linear rail rod!
     - Thanks to **[Due-Telephone-6817](https://www.reddit.com/user/Due-Telephone-6817)** for taking those pictures of the spider coupler and the diaphragm coupler!  
     - Thanks to **[Fasthotrod](https://www.reddit.com/user/Fasthotrod)** for providing me the pics of the eccentric nut, eccentric nut vs rigid post and the mis- and well-positioned SG15 bearings!      
@@ -73,12 +73,11 @@ Please mind the **search field** in the header as well as the icon in the header
     - Thanks to **[Imaginary_Gift_8533](https://www.reddit.com/user/Imaginary_Gift_8533/)** for allowing me to use his picture of the wear & tear of his wheels!  
     - Thanks to **[Island-Strange](https://www.reddit.com/user/Island-Strange/)** for taking a picture of his shortcut bed!  
     - Thanks to **[Jaximus](https://www.reddit.com/user/Jaximus)** for allowing me to use the picture of the slipped out cartridge heater!  
-    - Thanks to **[lpi](https://github.com/lpi)** for providing the content of the update.swu file to me!
     - Thanks to **[mowerheimen](https://www.reddit.com/user/mowerheimen)** for allowing me to use the picture of the crooked x-axis gantry!
     - Thanks to **[Relative_Distance445](https://www.reddit.com/user/Relative_Distance445/)** for allowing me to use his picture of the heavy wear&tear of the linear rail rod!
     - Thanks to **[Fabulous-View-5862](https://www.reddit.com/user/Fabulous-View-5862)** for allowing me to use the picture of his clumped hotend!    
     - Thanks to **[Yoriko_Rayne_](https://www.reddit.com/user/Yoriko_Rayne_)** for allowing me to use the picture of how to use the ABL height gauge!  
-    - Thanks to **[zyssai](https://www.reddit.com/user/zyssai)** for allowing me to use the picture of the diassembled stepper motor!
+    - Thanks to **[zyssai](https://www.reddit.com/user/zyssai)** for allowing me to use the picture of the disassembled stepper motor!
     
 ---
     
