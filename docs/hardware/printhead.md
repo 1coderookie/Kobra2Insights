@@ -21,7 +21,7 @@
 
 ---
 
-The printhead of the **Kobra 2 Neo** includes the direct drive feeder gear system, the distribution board for connecting the electronic components, the hotend, the heatsink and part cooling fans and the ABL sensor.   
+The printhead of the **Kobra 2** includes the direct drive feeder gear system, the distribution board for connecting the electronic components, the hotend, the heatsink and part cooling fans and the ABL sensor.   
 
 The following pictures show the printhead with the blue plastic cover from various angles. At the picture of the top you can clearly see the lever you have to push aside for loading filament as well as the PC-4 connector in the middle which takes the reverse bowden tube.   
 
@@ -43,8 +43,8 @@ The following pictures show the head with the mounted cover from the underside v
 
 !!! warning  
 
-    It is **not** the same printhead as the one being used at the *Kobra 2 Pro, Plus and Max*. So you can **not** get yourself a printhead of these models and use it at the Kobra 2 Neo!  
-    It is 'pretty much' the same as the one being used in the regular *Kobra 2* though. The (only) difference (I'm aware of) seems to be the extruder, where the one at the Kobra 2 Neo is single-geared and the one at the Kobra 2 is a dual gear. Besides that, it seems that it's compatible and therefore one could get a printhead of the Kobra 2 and use it at the Kobra 2 Neo.  
+    It is **not** the same printhead as the one being used at the *Kobra 2 Pro, Plus and Max*. So you can **not** get yourself a printhead of these models and use it at the Kobra 2!  
+    It is 'pretty much' the same as the one being used in the *Kobra 2 Neo* though. The (only) difference (I'm aware of) seems to be the extruder, where the one at the Kobra 2 Neo is single-geared and the one at the Kobra 2 is a dual gear. Besides that, it seems that it's compatible and therefore one could get a printhead of the Kobra 2 Neo and use it at the Kobra 2 if it's impossible to get the head of the Kobra 2.  
     However, I wasn't able to compare both heads 1:1 exactly and e.g. measure the pinouts of the PCB - but as they're labeled the same, I *assume* it's compatible. 
 
 --- 
@@ -1099,7 +1099,7 @@ Anycubic ships the printheads with a *proprietary* Volcano-like brass nozzle (0.
 
 ### Spare Nozzles
 
-If you need to replace the nozzle, you either have to buy spare part nozzles directly from Anycubic or find a 3rd party seller who sells these specific nozzles. These ones can often be found much cheaper than the ones from Anycubic while the quality might be comparable. If you search for these kind of specific stock nozzles, you can search for e.g. "Anycubic Kobra 2 nozzle", as the same type of proprietary nozzle is being used in the regular Kobra 2 and the other models of the Kobra 2 line (like the Kobra 2 Neo, Plus and Max).  
+If you need to replace the nozzle, you either have to buy spare part nozzles directly from Anycubic or find a 3rd party seller who sells these specific nozzles. These ones can often be found much cheaper than the ones from Anycubic while the quality might be comparable. If you search for these kind of specific stock nozzles, you can search for e.g. "Anycubic Kobra 2 nozzle", as the same type of proprietary nozzle is being used in the whole Kobra 2 line (like the Kobra 2 Neo, Pro, Plus and Max).  
 
 Anycubic only sells 0.4mm nozzles and also in the `printer.cfg` the nozzle size is set to 0.4mm.  
 However, there are 3rd party manufacturers though who already offer this specific nozzle design in different sizes.  
