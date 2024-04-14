@@ -37,7 +37,7 @@ So if you notice that e.g. the motor of the y-axis doesn't stop when the bed rea
 ## X-Axis
 The x-axis is represented by the printhead moving along the x-axis gantry.  
 
-![X axis](../assets/images/axes_K2Pro_X-gantry_web.jpg)  
+![x-gantry](../assets/images/axes_K2_xgantry_web.jpeg)  
 
 The metal plate where the printhead is mounted onto is belt driven, the motor which drives the belt (6mm wide, GT-2 type) is located at the left side.   
 
@@ -315,7 +315,8 @@ The following pictures show the limit switch from two different point of views.
 ## X-Axis Gantry
 The x-axis gantry is the aluminum profile (plus the corresponding parts) where the printhead is actually running onto.  
 
-![X gantry](../assets/images/axes_K2Pro_X-gantry_web.jpg)  
+![X-gantry](../assets/images/axes_K2_xgantry_web.jpeg)   
+![X-gantry back](../assets/images/axes_K2_xgantry_back_web.jpeg)  
 
 You already read the information about the belonging parts of the x-axis in the chapter above, in the following you'll find the information about the parts of the x-axis gantry which are moving along the z-axis frame.  
 Plus, you'll find information about *how to tram the x-axis gantry, which is crucial for a good and reliable outcome*.  
