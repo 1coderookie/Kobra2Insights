@@ -257,9 +257,28 @@ It has to be mentioned though that a high(er) retraction speed isn't always the 
 
 ### Calibrating E-Steps
 You've probably already came along the sentence "calibrate your e-steps" and maybe you wonder what it is, what you'd have to do and why you should do so. It's actually pretty simple: the "e-steps" are the steps of the motor of your extruder (so "e-steps" stands for "extruder-steps") and therefore they determine how much filament will be extruded with a certain amount of motor steps.  
-Depending on how accurate this setting is (means, how well you calibrated the e-steps), you'll either have some pretty perfect prints (in the meaning of the amount of filament of each layer) or you'll see signs of more or less severe under- or overextrusion.  
-Now some people try to adjust or get rid of this problem by setting different extrusion multipliers in the slicer without touching this setting, but that's not the best/correct way (imho), as you always should have the hardware tuned in as much as possible before trying to tweak software settings for better results.   
-However, due to the fact that KobraOS is based on Klipper where you'd have to change the e-steps (which are called rotation distance in Klipper) in the file `printer.cfg` and that we don't have access to this file as KobraOS is closed-source, we can't actually adjust the setting. So one has to go with adjusting the flowrate in the slicer.
+Depending on how accurate this setting is (means, how well you calibrated the e-steps), you'll either have some pretty perfect prints (in the meaning of the amount of filament of each layer) or you'll see signs of more or less severe under- or overextrusion. Some people try to adjust or get rid of this problem by setting different extrusion multipliers in the slicer, but that's not the best/correct way (imho). You always should have the hardware tuned in as much as possible before trying to tweak software settings for better results.   
+
+Even though the e-steps don't seem to be way off when it comes from the manufacturer with the default firmware settings, it's advisable to calibrate them.  
+This whole procedure really isn't a big deal and doesn't take long, so make sure to do this calibration!   
+  
+However, you need an additional software like OctoPrint or Pronterface for being able to send the specific g-code commands to the printer. As you most likely don't have that installed yet when you just started with 3d printing, I'm mentioning this calibration not as one of the first things to do, even though one should do it as soon and early as possible, as it effects the outcome overall.   
+  
+The actual process of how to calibrate the e-steps is described in many articles see the abovementioned and videos already, so right now I won't go into the final details here. Please see the links in the section ["Calibration Guides"](#calibration-guides) above.   
+
+So, basically what you'll do is measure e.g. 100mm and 120mm of filament right above the printhead where the filament enters and mark those two spots. Then you heat up your system to your regular printing temperature, extrude 100mm and measure the distance between the printhead (where the filament enters) and the 100mm and 120mm marks once the extrusion is done.  
+If e.g. the 100mm mark is right at the spot where the filament enters - great, no calibration necessary!  
+But if either more or less than the 100mm got extruded, then you'd have to do a little math using a formula and the measured values of the distance to the marks for determining the final value of the e-steps. The calculated value has to be set and saved to the firmware then.  
+After doing so, repeat this process for verifying that the new setting is correct.  
+  
+Some guides say that you should do it without a nozzle, some guides say you should do it with the nozzle. I personally found it most precise when doing the calibration using the final print setup, so these are my personal suggestions when it comes down to execute this procedure:  
+
+- Determine the correct printing temperature for the filament you're using.   
+- Use the nozzle you're going to use for printing as well - so don't calibrate the e-steps with e.g. a 0.4mm nozzle, when you're printing with a 0.6mm nozzle later. 
+- Make sure the pressure of the feeder gear is correct and it's (mostly) the setting you'll use later on as well. So don't calibrate with a sloppy feeder gear and crank up the tension later and vice versa. 
+- *Make sure to use a fine lined, waterproof pen for marking the filament, so don't use a fat marker which aleady draws a 1mm or 2mm wide line!* You want to be as precise as possible here! 
+- *Make sure to use a precise ruler or a sliding gauge for being able to actually really measure 100mm!* You'd be suprised how bad certain measurement tools actually are and how big deviations can actually be, so make sure to use a sufficient measuring tool.  
+- Calibrate the e-steps whenever you use different type of filament, even different spools of the same type. The process doesn't take long, but it's crucial that the e-steps are calibrated. So better take the little time to check if everything is still fine after changing the filament.  
 
 
 ---
@@ -271,9 +290,148 @@ By executing a PID tuning, the printer heats up the desired heating element (ext
 It's advisable to execute a PID tuning for both the extruder and the bed before you want to use your printer for the first time.  
 Also after you changed something at the hotend (like installed a new nozzle or heatbreak) and especially if you changed the cartridge heater or a thermistor (or even the position of it when removing and reinserting it) or installed a new bed, you should execute a PID tuning.  
 
-Again, as this KobraOS is based on Klipper, one would usually do that with two specific commands for the hotend and the heated bed - but as there's no way to connect to the machine locally through a webinterface like Mainsail or Fluidd (as there's no Moonraker API implementation given here), we can't execute PID tunings this way.   
+The best way to execute a PID tuning is by simply using certain G-code commands and send them to your printer. To do so, I'll show you an example of how to do it using OctoPrint - but you can do it with any other program that allows you to send G-code commands directly also.  
+  
+PID tuning needs to be done in two steps: one for the extruder and one for the bed.  
+   
 
-As I didn't check yet if the control unit offers this function, I can't give you further information right now if this calibration process can actually be initialized. I'll update this section as soon as I investigated this.  
+---
+
+#### Extruder PID Tuning
+Because I use to print at 220°C, I want to use this temperature for the PID tuning of the extruder.  
+I want the printer to execute seven cycles - the more the better the result will be.  
+
+The belonging G-code is  
+`M303 E0 S220 C7`  
+where `M303` is the PID tune, `E0` is the extruder, `S220` is the temperature of 220°C and `C7` means seven cycles.  
+
+??? info "Turn On The Part Cooling Fan Beforehand"  
+
+    It's advisable to turn on the part cooling fan before doing the PID tuning for the hotend to take a possible effect of it into account.  
+    If you do so, it might be smart to use the fan speed you're going to use later for printing - by doing so, you could also create PID tuning values for different types of filament which require a different fan speed, like PLA, PETG, TPU and so on and add the specific values to the start g-code of your slicer's profiles for these specific types of filament.   
+    
+    The following command turns on the part cooling fan with the fan speed of 100%: `M106 E0 S255`  
+    The value 255 means 255 PWM cycles, which is 100% fan speed.  
+    If you want to run the fan at a different fan speed, like 50% for example, you have to calculate the belonging binary value you have to use (instead of 255) by multiplying the desired speed value by 2.55.  
+    So as an example: let's assume you want to run the fan at 50% as you use to run the part cooling fan at 50% when printing PETG. Therefore you want to do the PID tuning with the part cooling fan running at 50% as well. Now calculate 50*2.55=127.5 which is then rounded up to 128 - which then is the binary value you need to use: `M106 E0 S128` = the part cooling fan runs at 50% fan speed for the PID tuning.   
+    
+      
+After sending this command, the printer will reply and start the process:  
+```
+Send: M303 E0 S220 C7  
+Recv: PID Autotune start
+```
+    
+The printer will then display the process and values for each cycle. You don't need that later, but just that you saw that once I'll show you an output of one of those cycles:  
+```
+Recv:  T:219.87 /0.00 (244.63) B:47.71 /0.00 (3646.75) @:101 B@:0
+Recv:  T:218.31 /0.00 (252.13) B:47.62 /0.00 (3648.25) @:101 B@:0
+Recv:  T:216.46 /0.00 (261.00) B:47.55 /0.00 (3649.25) @:101 B@:0
+Recv:  T:215.44 /0.00 (265.88) B:47.43 /0.00 (3651.13) @:101 B@:0
+Recv:  T:214.66 /0.00 (269.63) B:47.34 /0.00 (3652.50) @:101 B@:0
+Recv:  T:214.71 /0.00 (269.38) B:47.21 /0.00 (3654.38) @:101 B@:0
+Recv:  T:215.13 /0.00 (267.38) B:47.07 /0.00 (3656.50) @:101 B@:0
+Recv:  T:216.17 /0.00 (262.38) B:47.06 /0.00 (3656.75) @:101 B@:0
+Recv:  T:217.55 /0.00 (255.75) B:46.99 /0.00 (3657.75) @:101 B@:0
+Recv:  T:219.04 /0.00 (248.63) B:46.91 /0.00 (3659.00) @:101 B@:0
+Recv:  T:220.84 /0.00 (240.63) B:46.86 /0.00 (3659.75) @:0 B@:0
+Recv:  T:223.09 /0.00 (231.63) B:46.72 /0.00 (3661.88) @:0 B@:0
+Recv:  T:224.44 /0.00 (226.25) B:46.62 /0.00 (3663.38) @:0 B@:0
+Recv:  T:225.22 /0.00 (223.13) B:46.50 /0.00 (3665.25) @:0 B@:0
+Recv:  T:225.78 /0.00 (220.88) B:46.44 /0.00 (3666.13) @:0 B@:0
+Recv:  T:225.19 /0.00 (223.25) B:46.28 /0.00 (3666.63) @:0 B@:0
+Recv:  T:224.50 /0.00 (226.00) B:46.24 /0.00 (3669.13) @:0 B@:0
+Recv:  T:223.53 /0.00 (229.88) B:46.16 /0.00 (3670.38) @:0 B@:0
+Recv:  T:222.34 /0.00 (234.63) B:46.08 /0.00 (3671.63) @:0 B@:0
+Recv:  T:220.34 /0.00 (242.63) B:46.00 /0.00 (3672.75) @:0 B@:0
+Recv:  bias: 101 d: 101 min: 214.48 max: 225.78 Ku: 22.76 Tu: 38.85
+Recv:  Classic PID
+Recv:  Kp: 13.65 Ki: 0.70 Kd: 66.31
+```
+As you can see looking at the first value "T:" which is the temperature of the extruder, it fluctuates around the desired 220°C, so the printer heats it up and let it cool down around the 220°C.  
+  
+You can see the process by looking at the temperature graph as shown below.  
+![PID tuning extruder](assets/images/pid-tune-extruder.png)
+
+After finishing the seven cycles, you'll receive a summarized output like the one below:  
+``` 
+Recv: PID Autotune finished! Put the last Kp, Ki and Kd constants from below into Configuration.h
+Recv: #define DEFAULT_Kp 20.84
+Recv: #define DEFAULT_Ki 1.86
+Recv: #define DEFAULT_Kd 58.26
+Recv: ok
+```
+You can see the values for P = Kp, I = Ki and D = Kd - these have to be sent to the printer.  
+To do so, we take the values from above and send the following `M301` command, the printer will answer with a "received" message:  
+```
+Send: M301 P20.84 I1.86 D58.26
+Recv: echo: p:20.84 i:1.86 d:58.26
+Recv: ok
+```
+Now we need to save everything by sending the `M500` command:
+```
+Send: M500 
+Recv: echo:Settings Stored (735 bytes; crc 9159)
+Recv: ok
+```
+
+You can/should now also execute a `M501` command which restores/loads all saved settings from the EEPROM to the volatile memory. Now the printer has access to the settings you have saved previously.  
+
+To check if everything got applied, you can now execute a `M503`, which reports the current settings loaded on the volatile memory.   
+
+That's it!  
+Congratulations, you just did the PID tuning for your extruder!
+
+??? tip "Create PID Tuning Values For Different Types Of Filament And Add The Values To Your Slicer"
+
+    It might be smart to do PID tunings with different fan speeds for certain kind of filament, as the fanspeed might affect the PID tuning.  
+    So let's assume you have a profile for PETG where you run the part cooling fan at 50%, use the according command to turn on the fan with 50% speed before executing the PID tuning. See the expandable textbox above for further information about how to do so.  
+    
+    You can then add the specific PID values to the start g-code of your slicer. So let's assume you made a PID tuning with 50% fan speed for PETG and got the values P20.84 I1.86 D58.26, then you add the line `M301 P20.84 I1.86 D58.26` to your slicer's start g-code.  
+
+    Mind that you *probably* have to create multiple *printer* profiles for being able to do so though (iirc this is/was the case when using Cura) as it might be that it's not possible to add this to the profiles of the filaments.  
+    
+---    
+    
+#### Bed PID Tuning
+Now you want to do the same for your heated bed, but you have to use a different command.  
+Because I use to print at a bed temperature of 60°C, I want to execute the PID tuning at that temperature also. Again it should be done seven times.  
+
+The belonging code is  
+`M303 E-1 S60 C7`
+where `M303` is the PID tune, `E-1` is the bed, `S60` is the temperature of 60°C and `C7` means seven cycles.  
+     
+Because you already know the steps now, I'll just write down the commands and answers from the printer:  
+```
+Send: M303 E-1 S60 C7
+Recv: PID Autotune start
+(...)
+Recv: PID Autotune finished! Put the last Kp, Ki and Kd constants from below into Configuration.h
+Recv: #define DEFAULT_bedKp 124.24
+Recv: #define DEFAULT_bedKi 21.69
+Recv: #define DEFAULT_bedKd 474.49
+Recv: ok
+(...)
+Send: M304 P124.24 I21.69 D474.49
+Recv: echo: p:124.24 i:21.69 d:474.49
+Recv: ok
+(...)
+Send: M500
+Recv: echo:Settings Stored (735 bytes; crc 54612)
+Recv: ok
+```
+
+You can/should now also execute a `M501` command which restores/loads all saved settings from the EEPROM to the volatile memory. Now the printer has access to the settings you have saved previously.  
+
+To check if everything got applied, you can now execute a `M503`, which reports the current settings loaded on the volatile memory.   
+
+That's it!  
+Congratulations, you just did the PID tuning for your bed!
+
+??? tip "Insulate The Bedplate"  
+
+    Insulating the bedplate with sufficient material has a great effect on the stability and the behaviour while heating up and cooling down. It'll minimize temperature fluctuations and saves electrical energy as well. Check out the section [Insulating the Bed](hardware/bed.md#insulating-the-bed) for further information.  
+
 
 ---  
   
