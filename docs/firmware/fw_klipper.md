@@ -40,10 +40,10 @@ For further information about the installation steps please read the chapter ["I
 
 To build the correct firmware, use the following configuration during the setup process for creating the `klipper.bin` file:  
 
-- Micro-controller Architecture: ..
-- Processor model: ..
-- Bootloader: ..  
-- Communication interface: ..    
+- Micro-controller Architecture: Huada Semiconductor HC32F460
+- Communication interface: Serial PA15 & PA09
+- Application Address: 0x010000
+- Clock Speed: 168MHz    
   
 ![K2 compile config](../assets/images/K2_bin-cfg.jpg)   
 
@@ -78,7 +78,8 @@ Now you should be able to connect OctoPrint/Mainsail/.. with the printer. If an 
 ---
   
 ## Configuration  
-Besides the `klipper.bin` you also need a file named `printer.cfg` which contains the specific settings for your model. Please refer to the official Klipper documentation about [configuring Klipper](https://www.klipper3d.org/Installation.html#configuring-klipper).  
+Besides the `klipper.bin` you also need a file named `printer.cfg` which contains the specific settings for your model. Unfortunately I can't offer this specific file right now, but there are some to find if you search the web for it.    
+If you have to set one up from scratch or if you want to adjust settings of a file you found, please refer to the official Klipper documentation about [configuring Klipper](https://www.klipper3d.org/Installation.html#configuring-klipper).  
 
 I won't mention and explain all the settings here as you can just use the official documentation of Klipper to see what each setting means.   
 
