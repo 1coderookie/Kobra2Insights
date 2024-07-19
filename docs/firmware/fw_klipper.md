@@ -101,7 +101,7 @@ See the [g-codes chapter](https://www.klipper3d.org/G-Codes.html) of the officia
 
     Look out for a setting in your slicer called something like "G-Code Flavour". If it's available, set the flavour to "Klipper".  
     In PrusaSlicer you can find this setting under "Printer Settings" -> "General" -> "Firmware" (you need to have "Expert" mode activated to get access to that option!). The following screenshot shows that setting.  
-    ![G-code flavour](assets/images/g-code_flavour.png)   
+    ![G-code flavour](../assets/images/g-code_flavour.png)   
 
 ---
 
