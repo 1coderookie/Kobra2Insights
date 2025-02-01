@@ -45,9 +45,9 @@ For further information about the installation steps please read the chapter ["I
 To build the correct firmware, use the following configuration during the setup process for creating the `klipper.bin` file:  
 
 - Micro-controller Architecture: Huada Semiconductor HC32F460
-- Communication interface: Serial PA15 & PA09
-- Application Address: 0x010000
-- Clock Speed: 168MHz    
+- Communication interface: Serial PA02 & PA03 (Note: Serial PA15 & PA09 has been reported as well, but it seems that it didn't work at all boards and/or that one also would have to connect RST and GND at the mainboard to enter flash mode.)
+- Application Address: 0x100000 (Note: or 0x008000 - not 100% sure where the difference is, both seem to work.)  
+- Clock Speed: 168MHz (Note: 200MHz seems to work as well.)   
   
 ![K2 compile config](../assets/images/K2_bin-cfg.jpg)   
 
