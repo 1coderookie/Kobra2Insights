@@ -24,6 +24,10 @@ The "Huada HC32F460" MCU being used on the stock mainboard is supported by the K
     Long story short: Klipper is an 'alternative' firmware which gives you way more possibilities and even functions for configuring and using your 3D printer. If you don't know what Klipper is, this may be a good start for your research: [All3DP: Klipper](https://www.all3dp.com/topic/klipper)  
 -->
 
+!!! warning  
+
+    In the following, I **don't** give a step-by-step guide about how to install and configure Klipper, so please read the official documentation attentively!  
+
 ---
   
 ## Requirements
