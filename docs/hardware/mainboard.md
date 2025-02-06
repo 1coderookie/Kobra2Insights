@@ -8,9 +8,9 @@
 
 ---
 
-## TriGorilla Pro B V_1.0.2 (Stock) 
+## Trigorilla Pro B V_1.0.2 (Stock) 
   
-The stock mainboard is the "TriGorilla Pro B_1.0.2".  
+The stock mainboard is the "Trigorilla Pro B_1.0.2".  
 It is a 32bit 24V mainboard with a Huada HC32F460 KCTA ARM Cortex-M4 with 192KB SRAM and 512KB Flash.  
 The speed  of the ARM chip is listed as 200MHz by the manufacturer.  
 It offers a microSD card reader, a USB-C connector and a 10 pin connector for adding the control unit.    
