@@ -30,7 +30,11 @@ The mainboard comes with TMC2208 silent stepper drivers *soldered* onto the boar
     Thanks again to @aspiringnobody who came across this and reported it!  
 -->  
   
-![Mainboard TriGorilla front](../assets/images/mobo_K2_full_web.jpeg)  
+![Mainboard TriGorilla front assembled](../assets/images/mobo_K2_full_web.jpeg)  
+
+![Mainboard TriGorilla front](../assets/images/Trigorilla_Pro_B_v102_front_web.jpg)  
+
+![Mainboard TriGorilla back](../assets/images/Trigorilla_Pro_B_v102_back_web.jpg)  
   
 <!--
 ![Mainboard TriGorilla back](../assets/images/mainboard_K2Neo_back_web.jpg)    
